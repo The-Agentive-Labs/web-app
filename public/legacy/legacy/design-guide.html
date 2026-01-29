@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Guide | Design Research Library</title>
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="pattern-page.css">
+</head>
+<body>
+  <div class="research-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title"><a href="research-library.html">Research Library</a></div>
+      <nav class="nav-section active">
+        <div class="nav-section-title">Execution & Testing<span class="expand-icon">▸</span></div>
+        <ul class="nav-links">
+          <li><a href="low-fidelity.html">Low-Fidelity Design</a></li>
+          <li><a href="prototyping.html">Prototyping</a></li>
+          <li><a href="design-guide.html" class="active">Design Guide</a></li>
+          <li><a href="testing.html">Testing</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div class="capability-tags">
+          <span class="tag">Execution</span>
+          <span class="tag">Design Systems</span>
+        </div>
+        <h1>Design Guide</h1>
+        <p class="purpose">Document design principles, patterns, and components to ensure consistency and scalability across your product.</p>
+      </header>
+
+      <div class="pattern-split">
+        <section class="learn-container">
+          <h2>Learn</h2>
+          
+          <h3>What is a Design Guide?</h3>
+          <p>A Design Guide (also called a Design System or Style Guide) is a comprehensive reference document that codifies your product's visual language, interaction patterns, and component library. It's the single source of truth that ensures designers, developers, and stakeholders create consistent, on-brand experiences. Think of it as your product's design DNA.</p>
+
+          <h3>Why Create a Design Guide?</h3>
+          <ul>
+            <li><strong>Consistency:</strong> Ensures UI looks and behaves the same across features, platforms, and teams.</li>
+            <li><strong>Efficiency:</strong> Designers and developers reuse components instead of reinventing them.</li>
+            <li><strong>Scalability:</strong> New team members onboard faster with clear documentation.</li>
+            <li><strong>Quality:</strong> Pre-tested, accessible components reduce bugs and improve UX.</li>
+            <li><strong>Brand Coherence:</strong> Visual identity remains cohesive as the product grows.</li>
+          </ul>
+
+          <h3>Core Components of a Design Guide</h3>
+          <ul>
+            <li><strong>Design Principles:</strong> High-level values that guide decisions (e.g., "Simple over complex")</li>
+            <li><strong>Color Palette:</strong> Primary, secondary, neutral, semantic colors (success, error, warning)</li>
+            <li><strong>Typography:</strong> Font families, scales, weights, line heights</li>
+            <li><strong>Spacing & Layout:</strong> Grid systems, spacing tokens, breakpoints</li>
+            <li><strong>Components:</strong> Buttons, forms, cards, modals, navigation—with code examples</li>
+            <li><strong>Patterns:</strong> Common UI patterns (empty states, error handling, loading states)</li>
+            <li><strong>Accessibility:</strong> WCAG guidelines, contrast ratios, keyboard navigation</li>
+            <li><strong>Voice & Tone:</strong> Writing guidelines for UI copy</li>
+          </ul>
+
+          <h3>Maturity Levels</h3>
+          <ul>
+            <li><strong>Level 1: Static Style Guide:</strong> PDF or Figma file with colors, fonts, and basic components</li>
+            <li><strong>Level 2: Living Documentation:</strong> Web-based guide with interactive examples and code snippets</li>
+            <li><strong>Level 3: Component Library:</strong> Reusable, versioned components in code (React, Vue, etc.) synced with design tools</li>
+            <li><strong>Level 4: Design System Team:</strong> Dedicated team maintaining, evolving, and supporting the system</li>
+          </ul>
+
+          <h3>Best Practices</h3>
+          <ul>
+            <li><strong>Start Small:</strong> Begin with colors, typography, and 5-10 core components. Expand as needed.</li>
+            <li><strong>Make It Accessible:</strong> Host it where everyone can access it (web, not just Figma or code repo).</li>
+            <li><strong>Show, Don't Just Tell:</strong> Include visual examples and live code demos, not just descriptions.</li>
+            <li><strong>Version Control:</strong> Track changes. Communicate updates to teams when components change.</li>
+            <li><strong>Include Do's and Don'ts:</strong> Show correct and incorrect usage with examples.</li>
+            <li><strong>Make It Searchable:</strong> Teams should find what they need in under 30 seconds.</li>
+            <li><strong>Keep It Alive:</strong> Design guides aren't one-and-done. Update regularly as the product evolves.</li>
+          </ul>
+        </section>
+
+        <section class="build-container">
+          <h2>Build</h2>
+
+          <h3>Template: Design Guide Structure</h3>
+          <div class="code-block">
+            <code><strong>1. Introduction</strong><br>
+- Purpose of this guide<br>
+- Design principles (3-5 core values)<br>
+<br>
+<strong>2. Foundation</strong><br>
+- Color palette (primary, secondary, neutral, semantic)<br>
+- Typography (font families, scales, weights)<br>
+- Spacing system (tokens: 4px, 8px, 16px, etc.)<br>
+- Grid & layout (columns, breakpoints)<br>
+<br>
+<strong>3. Components</strong><br>
+For each component:<br>
+- Visual example<br>
+- Variants (default, hover, disabled, etc.)<br>
+- Usage guidelines (when to use, when not to use)<br>
+- Code snippet (HTML/CSS/React/etc.)<br>
+- Accessibility notes<br>
+<br>
+<strong>4. Patterns</strong><br>
+- Form validation<br>
+- Empty states<br>
+- Loading states<br>
+- Error handling<br>
+<br>
+<strong>5. Voice & Tone</strong><br>
+- Writing guidelines<br>
+- Example microcopy</code>
+          </div>
+
+          <h3>Step-by-Step Instructions</h3>
+          <ol>
+            <li><strong>Audit Existing Design:</strong> Take inventory of all UI elements currently in your product. What's consistent? What's inconsistent?</li>
+            <li><strong>Define Design Principles:</strong> Write 3-5 core values (e.g., "Clarity over cleverness," "Fast and lightweight"). These guide all decisions.</li>
+            <li><strong>Document Foundation:</strong> Extract color palette, typography, and spacing from existing designs. Create semantic tokens (e.g., `color-primary`, `spacing-md`).</li>
+            <li><strong>Catalog Components:</strong> List all UI components (buttons, inputs, cards, etc.). For each, capture variants, states, and usage rules.</li>
+            <li><strong>Build Examples:</strong> Create visual examples and code snippets. Show components in context (e.g., button in a form).</li>
+            <li><strong>Add Accessibility:</strong> Document contrast ratios, keyboard navigation, ARIA labels. Test with screen readers.</li>
+            <li><strong>Publish & Share:</strong> Host on a web platform (Storybook, Zeroheight, custom site). Share link with all teams.</li>
+            <li><strong>Iterate:</strong> Gather feedback. Update as you design new features. Version major changes.</li>
+          </ol>
+
+          <h3>Example: Freelance Invoice App Design Guide</h3>
+          <div class="example-box">
+            <p><strong>Design Principles:</strong></p>
+            <ul>
+              <li><strong>1. Simple First:</strong> Prioritize clarity over features. If it requires explanation, simplify.</li>
+              <li><strong>2. Fast & Light:</strong> Interactions should feel instant. No unnecessary animations or bloat.</li>
+              <li><strong>3. Human, Not Corporate:</strong> Friendly, conversational tone. Reduce anxiety, not increase it.</li>
+            </ul>
+
+            <p><strong>Color Palette:</strong></p>
+            <ul>
+              <li><strong>Primary:</strong> Purple #963BF7 (CTAs, links, highlights)</li>
+              <li><strong>Success:</strong> Green #10B981 (paid invoices, success states)</li>
+              <li><strong>Warning:</strong> Orange #F59E0B (overdue invoices)</li>
+              <li><strong>Error:</strong> Red #EF4444 (errors, destructive actions)</li>
+              <li><strong>Neutral:</strong> Gray scale from #050506 (text) to #FAFAFA (backgrounds)</li>
+            </ul>
+
+            <p><strong>Typography:</strong></p>
+            <ul>
+              <li><strong>Headings:</strong> Geist, 700 weight</li>
+              <li><strong>Body:</strong> Google Sans, 400 weight</li>
+              <li><strong>Code/Numbers:</strong> JetBrains Mono, 400 weight</li>
+              <li><strong>Scale:</strong> 12px (small), 14px (body), 16px (default), 20px (subheading), 24px+ (headings)</li>
+            </ul>
+
+            <p><strong>Component Example: Primary Button</strong></p>
+            <ul>
+              <li><strong>Default:</strong> Purple background (#963BF7), white text, 8px vertical padding, 16px horizontal padding, 8px border radius</li>
+              <li><strong>Hover:</strong> Darken to #7B2FD8</li>
+              <li><strong>Disabled:</strong> Gray background (#DDD8DD), gray text (#C9C4CC)</li>
+              <li><strong>Usage:</strong> Use for primary actions (Send Invoice, Save, Create). Limit to 1 per screen.</li>
+              <li><strong>Don't:</strong> Use for destructive actions (Delete). Use error-styled button instead.</li>
+            </ul>
+
+            <p><strong>Pattern Example: Invoice Status</strong></p>
+            <ul>
+              <li><strong>Pending:</strong> Orange dot + "Pending" text</li>
+              <li><strong>Paid:</strong> Green checkmark + "Paid" text + celebration animation</li>
+              <li><strong>Overdue:</strong> Red warning icon + "Overdue by X days" text</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="ai-copilot">
+        <h2>AI + Human Collaboration</h2>
+        
+        <div class="comparison-table">
+          <div class="comparison-column">
+            <h4>Human Value</h4>
+            <ul>
+              <li>Strategic vision to define design principles that align with brand</li>
+              <li>Design judgment to create cohesive visual systems</li>
+              <li>Contextual understanding of when to break the rules</li>
+              <li>Accessibility expertise to ensure inclusive design</li>
+            </ul>
+          </div>
+          <div class="comparison-column">
+            <h4>AI Value</h4>
+            <ul>
+              <li>Automated extraction of colors and typography from existing designs</li>
+              <li>Generation of component variants and states</li>
+              <li>Documentation drafting with code examples</li>
+              <li>Contrast ratio calculations and accessibility checks</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Key Considerations</h3>
+        <ul>
+          <li><strong>AI for Extraction:</strong> Use AI to scan existing designs and extract color palettes, spacing patterns, and typography scales. Humans curate and refine into semantic tokens.</li>
+          <li><strong>Component Variants:</strong> AI can generate common component states (hover, disabled, focus). Humans ensure they match brand and accessibility standards.</li>
+          <li><strong>Documentation Drafting:</strong> AI can draft component documentation and code snippets. Humans add usage guidelines, do's/don'ts, and context.</li>
+        </ul>
+
+        <h3>"AI in the Loop" Model</h3>
+        <ol>
+          <li><strong>Audit:</strong> AI scans Figma files or codebase to extract design tokens (colors, fonts, spacing). Humans review and organize into a semantic system.</li>
+          <li><strong>Component Documentation:</strong> AI generates initial component specs (props, variants, code examples). Humans add usage guidelines and accessibility notes.</li>
+          <li><strong>Accessibility Checks:</strong> AI calculates contrast ratios and flags WCAG violations. Humans adjust colors and document keyboard navigation patterns.</li>
+        </ol>
+
+        <h3>Watch-Outs</h3>
+        <ul>
+          <li>Don't let AI define your design principles. They require strategic brand alignment and human judgment.</li>
+          <li>Avoid AI-generated component names. They may be generic ("Button1", "Card2"). Use semantic names ("PrimaryButton", "InvoiceCard").</li>
+          <li>Be cautious of AI accessibility checks. They catch contrast and structure issues but miss semantic HTML and screen reader UX.</li>
+          <li>Don't auto-generate the entire design guide. It needs human curation, examples, and storytelling to be useful.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>

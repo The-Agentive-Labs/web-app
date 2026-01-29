@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRA Framework | Design Research Library</title>
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="pattern-page.css">
+  <style>
+    .ira-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--spacing-lg) 0;
+      background: var(--surface-primary);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+    }
+
+    .ira-table th,
+    .ira-table td {
+      padding: var(--spacing-md);
+      text-align: left;
+      border: var(--border-width-sm) solid var(--border-primary);
+    }
+
+    .ira-table th {
+      background: var(--surface-action);
+      color: var(--text-on-action);
+      font-weight: 600;
+      font-size: var(--font-size-body-md);
+    }
+
+    .ira-table td {
+      font-size: var(--font-size-body-sm);
+      color: var(--text-body);
+      vertical-align: top;
+    }
+
+    .ira-table tr:nth-child(even) {
+      background: var(--neutral-100);
+    }
+  </style>
+</head>
+<body>
+  <div class="research-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title"><a href="research-library.html">Research Library</a></div>
+      <nav class="nav-section active">
+        <div class="nav-section-title">Strategy & Planning<span class="expand-icon">▸</span></div>
+        <ul class="nav-links">
+          <li><a href="jtbd.html">Jobs to Be Done</a></li>
+          <li><a href="5es-journey.html">5 E's Journey Mapping</a></li>
+          <li><a href="ira.html" class="active">IRA Framework</a></li>
+          <li><a href="prfaq.html">PRFAQ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div class="capability-tags">
+          <span class="tag">Strategy</span>
+          <span class="tag">Planning</span>
+        </div>
+        <h1>IRA Framework</h1>
+        <p class="purpose">Transform research insights into strategic recommendations and concrete actions.</p>
+      </header>
+
+      <div class="pattern-split">
+        <section class="learn-container">
+          <h2>Learn</h2>
+          
+          <h3>What is IRA?</h3>
+          <p>IRA stands for <strong>Insight → Recommendation → Action</strong>. It's a strategic framework that bridges the gap between research findings and product decisions. IRA helps teams move from "what we learned" to "what we should do" by systematically translating raw insights into prioritized actions.</p>
+
+          <h3>Framework & Placement</h3>
+          <p>IRA sits at the transition point between research synthesis and product planning:</p>
+          <ul>
+            <li><strong>After:</strong> Affinity mapping, persona creation, journey mapping, or any deep synthesis activity</li>
+            <li><strong>Before:</strong> PRD writing, feature prioritization, or roadmap planning</li>
+          </ul>
+          <p>It's especially useful when you have rich qualitative data but need to communicate its implications to cross-functional stakeholders (engineering, product, business).</p>
+
+          <h3>Best Practices</h3>
+          <ul>
+            <li><strong>One Insight, One Recommendation:</strong> Resist the temptation to derive multiple recommendations from a single insight. Keep the chain linear and clear.</li>
+            <li><strong>Evidence-Based Insights:</strong> Every insight should trace back to specific research data (user quotes, behavioral observations, survey results).</li>
+            <li><strong>Actionable Recommendations:</strong> Recommendations should be strategic but feasible. "Redesign the entire platform" is not helpful. "Simplify the onboarding flow by removing steps 2-4" is.</li>
+            <li><strong>Measurable Actions:</strong> Actions should have clear success criteria. Define what "done" looks like and how you'll measure impact.</li>
+            <li><strong>Prioritize Ruthlessly:</strong> Not all insights are equally important. Rank them by user impact, business value, and feasibility. The IRA format makes prioritization transparent.</li>
+          </ul>
+        </section>
+
+        <section class="build-container">
+          <h2>Build</h2>
+
+          <h3>Template: IRA Table</h3>
+          <table class="ira-table">
+            <thead>
+              <tr>
+                <th>Insight</th>
+                <th>Recommendation</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>[What you learned from research. Include evidence: quotes, behaviors, patterns]</td>
+                <td>[What you should do strategically. The "so what" that addresses the insight]</td>
+                <td>[Specific, measurable steps. Who does what by when]</td>
+              </tr>
+              <tr>
+                <td>[Next insight...]</td>
+                <td>[Next recommendation...]</td>
+                <td>[Next action...]</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Step-by-Step Instructions</h3>
+          <ol>
+            <li><strong>Extract Key Insights:</strong> Review your research synthesis (affinity maps, personas, journey maps). Identify 5-10 critical insights that affect user experience or business outcomes.</li>
+            <li><strong>Validate with Evidence:</strong> For each insight, ensure you can cite specific research data. If you can't, it's an assumption, not an insight.</li>
+            <li><strong>Formulate Recommendations:</strong> For each insight, ask "So what?" What strategic change does this insight suggest? Think product strategy, not just features.</li>
+            <li><strong>Define Actions:</strong> Break each recommendation into concrete, assignable tasks. Use the format: "[Role] will [specific action] by [timeframe]."</li>
+            <li><strong>Prioritize:</strong> Rank insights by impact (high/medium/low) and effort (high/medium/low). Focus on high-impact, low-effort actions first.</li>
+            <li><strong>Review with Stakeholders:</strong> Share the IRA table with product, engineering, and design leads. Align on priorities and adjust actions based on constraints.</li>
+          </ol>
+
+          <h3>Example</h3>
+          <table class="ira-table">
+            <thead>
+              <tr>
+                <th>Insight</th>
+                <th>Recommendation</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Freelancers spend 2-3 hours/week manually tracking invoices and payments across email, spreadsheets, and bank accounts. (Source: 12/15 interview participants mentioned this pain point)</td>
+                <td>Build a centralized invoice dashboard that auto-syncs with payment platforms and sends reminders for overdue invoices</td>
+                <td>Product team to spec invoice dashboard feature by Q2. Engineering to prototype integration with Stripe/PayPal by end of Q2. Designer to create mockups by March 15.</td>
+              </tr>
+              <tr>
+                <td>Users abandon onboarding at Step 3 (payment setup) due to unclear value prop and security concerns. (Source: Analytics show 60% drop-off; 5 users cited "Why do you need my bank info?" in interviews)</td>
+                <td>Delay payment setup until after users experience core product value. Add trust signals (security badges, testimonials) to payment page.</td>
+                <td>Growth team to A/B test delayed payment setup in Q1. Marketing to add security copy and badges to payment page by Feb 1.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <section class="ai-copilot">
+        <h2>AI + Human Collaboration</h2>
+        
+        <div class="comparison-table">
+          <div class="comparison-column">
+            <h4>Human Value</h4>
+            <ul>
+              <li>Strategic judgment to prioritize insights by business impact</li>
+              <li>Contextual understanding of organizational constraints and politics</li>
+              <li>Ability to connect insights to broader product vision</li>
+              <li>Nuanced interpretation of qualitative research data</li>
+            </ul>
+          </div>
+          <div class="comparison-column">
+            <h4>AI Value</h4>
+            <ul>
+              <li>Rapid extraction of themes from large datasets (transcripts, surveys)</li>
+              <li>Pattern recognition across disparate data sources</li>
+              <li>Generation of multiple recommendation/action variations for discussion</li>
+              <li>Benchmarking against industry best practices and case studies</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Key Considerations</h3>
+        <ul>
+          <li><strong>AI for Insight Extraction:</strong> Use AI to analyze interview transcripts or survey responses at scale, identifying recurring themes. But always validate with human review—AI can miss sarcasm, cultural context, or emotional subtext.</li>
+          <li><strong>Human-Led Recommendations:</strong> Recommendations require strategic thinking and organizational knowledge that AI lacks. AI can suggest options, but humans must choose based on feasibility and alignment with business goals.</li>
+          <li><strong>Action Validation:</strong> AI can draft action items, but humans must ensure they're realistic given team capacity, technical constraints, and timelines.</li>
+        </ul>
+
+        <h3>"AI in the Loop" Model</h3>
+        <ol>
+          <li><strong>Insight Clustering:</strong> AI analyzes research data (transcripts, notes, surveys) and proposes initial insight themes. Humans refine, merge, or discard based on strategic relevance.</li>
+          <li><strong>Recommendation Brainstorming:</strong> For each validated insight, AI generates 3-5 potential recommendations. Humans evaluate and select the most feasible and impactful option.</li>
+          <li><strong>Action Planning:</strong> AI drafts specific action items with suggested owners and timelines. Humans adjust based on team availability, skill sets, and organizational priorities.</li>
+        </ol>
+
+        <h3>Watch-Outs</h3>
+        <ul>
+          <li>AI-generated insights may lack the depth of human interpretation. Always cross-check with raw research data.</li>
+          <li>Avoid "garbage in, garbage out"—if your research data is biased or incomplete, AI will amplify those flaws.</li>
+          <li>Don't let AI prioritize actions. Prioritization requires business context, user empathy, and strategic vision that AI cannot replicate.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>

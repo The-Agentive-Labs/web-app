@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs to Be Done | Design Research Library</title>
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="pattern-page.css">
+</head>
+<body>
+  <div class="research-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title"><a href="research-library.html">Research Library</a></div>
+      <nav class="nav-section active">
+        <div class="nav-section-title">Strategy & Planning<span class="expand-icon">▸</span></div>
+        <ul class="nav-links">
+          <li><a href="jtbd.html" class="active">Jobs to Be Done</a></li>
+          <li><a href="5es-journey.html">5 E's Journey Mapping</a></li>
+          <li><a href="ira.html">IRA Framework</a></li>
+          <li><a href="prfaq.html">PRFAQ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div class="capability-tags">
+          <span class="tag">Strategy</span>
+          <span class="tag">User Needs</span>
+        </div>
+        <h1>Jobs to Be Done (JTBD)</h1>
+        <p class="purpose">Frame user needs as functional goals ("jobs") rather than demographics or features.</p>
+      </header>
+
+      <div class="pattern-split">
+        <section class="learn-container">
+          <h2>Learn</h2>
+          
+          <h3>What is Jobs to Be Done?</h3>
+          <p>Jobs to Be Done (JTBD) is a framework that shifts focus from <em>who users are</em> to <em>what they're trying to accomplish</em>. The core idea: people "hire" products to do a job. Understanding the job—not the demographics—reveals why users choose your product over alternatives.</p>
+
+          <p><strong>Example:</strong> A milkshake isn't hired for its flavor, but for the job of "keeping me full during my commute." This lens helps teams innovate beyond surface-level features.</p>
+
+          <h3>Framework & Placement</h3>
+          <p>JTBD is used during <strong>Strategy & Planning</strong>:</p>
+          <ul>
+            <li><strong>After:</strong> User interviews, personas, and journey mapping</li>
+            <li><strong>Before:</strong> Feature prioritization, roadmap planning, and solution design</li>
+          </ul>
+          <p>It bridges user research and product strategy by translating behaviors into actionable product requirements.</p>
+
+          <h3>Core Concepts</h3>
+          <ul>
+            <li><strong>Functional Job:</strong> The core task (e.g., "send money to a friend quickly")</li>
+            <li><strong>Emotional Job:</strong> How users want to feel (e.g., "feel confident I'm managing finances responsibly")</li>
+            <li><strong>Social Job:</strong> How users want to be perceived (e.g., "appear generous to friends")</li>
+            <li><strong>Circumstances:</strong> The context that triggers the job (e.g., "splitting a dinner bill")</li>
+            <li><strong>Success Criteria:</strong> What "done" looks like (e.g., "payment received instantly, no awkward follow-up")</li>
+          </ul>
+
+          <h3>Best Practices</h3>
+          <ul>
+            <li><strong>Start with "When... I want to...":</strong> Frame jobs as situational needs, not product features.</li>
+            <li><strong>Focus on Progress, Not Tasks:</strong> Users don't want a drill; they want a hole in the wall. What progress are they trying to make?</li>
+            <li><strong>Include Emotional and Social Dimensions:</strong> Functional jobs alone miss why users care. Dig into feelings and identity.</li>
+            <li><strong>Map Competing Solutions:</strong> What do users hire today? (Competitors, workarounds, DIY hacks?) This reveals unmet needs.</li>
+            <li><strong>Validate with Real Stories:</strong> Ask users to describe a recent time they "hired" a solution. Stories reveal true jobs, not hypothetical ones.</li>
+          </ul>
+        </section>
+
+        <section class="build-container">
+          <h2>Build</h2>
+
+          <h3>Template: JTBD Statement</h3>
+          <div class="code-block">
+            <code>When [SITUATION],<br>
+I want to [MOTIVATION/GOAL],<br>
+So I can [EXPECTED OUTCOME].<br>
+<br>
+<strong>Functional Job:</strong> [Core task to accomplish]<br>
+<strong>Emotional Job:</strong> [Desired feeling/state]<br>
+<strong>Social Job:</strong> [Desired perception by others]</code>
+          </div>
+
+          <h3>Step-by-Step Instructions</h3>
+          <ol>
+            <li><strong>Identify the Situation:</strong> What triggers the need? Be specific about context (time, place, circumstances).</li>
+            <li><strong>Define the Motivation:</strong> What is the user trying to achieve? Focus on the goal, not the product.</li>
+            <li><strong>Articulate the Outcome:</strong> What does success look like? What changes when the job is done?</li>
+            <li><strong>Layer in Emotional/Social Jobs:</strong> What feelings or social signals matter? How does this job relate to the user's identity?</li>
+            <li><strong>Map Current Solutions:</strong> What do users hire today? (Your product, competitors, workarounds?) Why do they switch or stick?</li>
+            <li><strong>Identify Underserved Jobs:</strong> Where are existing solutions failing? What progress do users struggle to make?</li>
+            <li><strong>Validate with User Stories:</strong> Interview 5-10 users. Ask them to recount a specific time they faced this situation. Do their stories confirm the job?</li>
+          </ol>
+
+          <h3>Example: Freelance Invoice App</h3>
+          <div class="example-box">
+            <p><strong>JTBD Statement:</strong></p>
+            <p>When <strong>I complete a project for a client</strong>,<br>
+I want to <strong>get paid quickly and without awkward follow-up</strong>,<br>
+So I can <strong>maintain cash flow and focus on my next project</strong>.</p>
+
+            <p><strong>Functional Job:</strong> Create and send professional invoices; track payment status; automate reminders.</p>
+            <p><strong>Emotional Job:</strong> Feel confident and in control of finances; reduce anxiety about late payments.</p>
+            <p><strong>Social Job:</strong> Appear professional and organized to clients; avoid seeming desperate when chasing payments.</p>
+
+            <p><strong>Current Solutions (Competing Products):</strong></p>
+            <ul>
+              <li>Google Sheets + Gmail (free, but manual and error-prone)</li>
+              <li>QuickBooks (powerful, but overkill for freelancers—too complex)</li>
+              <li>PayPal Invoicing (integrated payments, but limited customization)</li>
+            </ul>
+
+            <p><strong>Underserved Need:</strong> Existing tools are either too manual (spreadsheets) or too complex (enterprise software). Freelancers need a middle ground: simple, automated, and payment-integrated.</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="ai-copilot">
+        <h2>AI + Human Collaboration</h2>
+        
+        <div class="comparison-table">
+          <div class="comparison-column">
+            <h4>Human Value</h4>
+            <ul>
+              <li>Empathy to uncover emotional and social job dimensions</li>
+              <li>Contextual understanding of situational triggers</li>
+              <li>Strategic judgment to prioritize high-impact jobs</li>
+              <li>Ability to probe beyond surface-level responses in interviews</li>
+            </ul>
+          </div>
+          <div class="comparison-column">
+            <h4>AI Value</h4>
+            <ul>
+              <li>Pattern recognition across large interview datasets</li>
+              <li>Identification of recurring "when... I want to..." phrases</li>
+              <li>Mapping of competing solutions from market research</li>
+              <li>Generation of JTBD statement variations for refinement</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Key Considerations</h3>
+        <ul>
+          <li><strong>AI for Job Extraction:</strong> Use AI to scan interview transcripts for language patterns ("I need to," "I wish I could," "I struggle with"). But humans must interpret context—AI misses sarcasm and nuance.</li>
+          <li><strong>Emotional Layer:</strong> AI can flag emotional keywords ("anxious," "frustrated," "confident"), but humans must validate the emotional job through follow-up questions.</li>
+          <li><strong>Job Prioritization:</strong> AI can quantify job frequency (how often it's mentioned), but humans must assess strategic importance (impact, differentiation, feasibility).</li>
+        </ul>
+
+        <h3>"AI in the Loop" Model</h3>
+        <ol>
+          <li><strong>Job Hypothesis Generation:</strong> AI scans user feedback (interviews, support tickets, reviews) to propose potential jobs. Humans validate and refine based on strategic fit.</li>
+          <li><strong>Competing Solution Mapping:</strong> AI analyzes competitor reviews and market data to identify what users currently "hire." Humans assess why users switch or churn.</li>
+          <li><strong>JTBD Statement Drafting:</strong> AI generates initial "When... I want to..." statements. Humans refine for clarity, add emotional/social dimensions, and validate with users.</li>
+        </ol>
+
+        <h3>Watch-Outs</h3>
+        <ul>
+          <li>Don't let AI define jobs based on product features. JTBD is about user progress, not "use our calendar tool." Keep it outcome-focused.</li>
+          <li>Avoid over-reliance on AI sentiment analysis. Emotional jobs require deep listening—AI can't replace human empathy in interviews.</li>
+          <li>Be cautious of "average job" bias. AI may surface the most common job, missing high-value niche jobs that differentiate your product.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>

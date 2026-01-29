@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototyping | Design Research Library</title>
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="stylesheet" href="pattern-page.css">
+</head>
+<body>
+  <div class="research-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title"><a href="research-library.html">Research Library</a></div>
+      <nav class="nav-section active">
+        <div class="nav-section-title">Execution & Testing<span class="expand-icon">▸</span></div>
+        <ul class="nav-links">
+          <li><a href="low-fidelity.html">Low-Fidelity Design</a></li>
+          <li><a href="prototyping.html" class="active">Prototyping</a></li>
+          <li><a href="design-guide.html">Design Guide</a></li>
+          <li><a href="testing.html">Testing</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div class="capability-tags">
+          <span class="tag">Execution</span>
+          <span class="tag">Design Validation</span>
+        </div>
+        <h1>Prototyping</h1>
+        <p class="purpose">Build interactive representations of your product to test ideas, gather feedback, and validate designs before development.</p>
+      </header>
+
+      <div class="pattern-split">
+        <section class="learn-container">
+          <h2>Learn</h2>
+          
+          <h3>What is Prototyping?</h3>
+          <p>Prototyping is the process of creating interactive, tangible representations of a product or feature before building the real thing. Prototypes range from paper sketches to high-fidelity interactive mockups. The goal: test assumptions, gather user feedback, and iterate quickly without the cost of full development.</p>
+
+          <h3>Why Prototype?</h3>
+          <ul>
+            <li><strong>Fail Fast, Fail Cheap:</strong> Discover flaws in paper or Figma, not in production code.</li>
+            <li><strong>User Validation:</strong> Put something tangible in front of users to test behaviors, not hypotheticals.</li>
+            <li><strong>Stakeholder Alignment:</strong> Show, don't tell. Prototypes communicate vision better than specs.</li>
+            <li><strong>Design Iteration:</strong> Explore multiple solutions quickly. Prototypes are disposable—code isn't.</li>
+          </ul>
+
+          <h3>Fidelity Spectrum</h3>
+          <ul>
+            <li><strong>Low-Fidelity:</strong> Paper sketches, wireframes, clickable wireframes. Fast to make, great for testing flows and concepts.</li>
+            <li><strong>Mid-Fidelity:</strong> Grayscale mockups with basic interactions. Good for testing information architecture and hierarchy.</li>
+            <li><strong>High-Fidelity:</strong> Pixel-perfect designs with full interactions, animations, and real content. Best for final validation before development.</li>
+          </ul>
+
+          <h3>Framework & Placement</h3>
+          <p>Prototyping happens during <strong>Execution</strong>:</p>
+          <ul>
+            <li><strong>After:</strong> Problem definition, journey mapping, feature prioritization</li>
+            <li><strong>Before:</strong> Development handoff and production build</li>
+          </ul>
+          <p>Start with low-fidelity to test concepts, then increase fidelity as you validate assumptions.</p>
+
+          <h3>Best Practices</h3>
+          <ul>
+            <li><strong>Match Fidelity to Questions:</strong> Testing a concept? Use low-fi. Testing visual polish? Use high-fi. Don't over-invest early.</li>
+            <li><strong>Make It Interactive:</strong> Static mockups can't test flows. Even simple clickable prototypes reveal usability issues.</li>
+            <li><strong>Use Real Content:</strong> Lorem ipsum hides problems. Use realistic data, especially for complex interfaces.</li>
+            <li><strong>Test Early and Often:</strong> Don't wait for perfection. Get a prototype in front of users within days, not weeks.</li>
+            <li><strong>Focus on Critical Paths:</strong> Prototype the happy path and 1-2 edge cases. Don't build every screen.</li>
+            <li><strong>Set Context:</strong> When testing, give users a scenario ("You just received an invoice..."). Don't explain the UI—see if they figure it out.</li>
+          </ul>
+        </section>
+
+        <section class="build-container">
+          <h2>Build</h2>
+
+          <h3>Prototyping Tools</h3>
+          <ul>
+            <li><strong>Paper & Pencil:</strong> Fastest for early concepts. Draw screens, cut them out, simulate clicks.</li>
+            <li><strong>Figma:</strong> Industry standard for digital prototypes. Collaborative, component-based, supports interactions.</li>
+            <li><strong>Framer:</strong> Code-based prototyping with advanced animations. Best for high-fidelity.</li>
+            <li><strong>Marvel/InVision:</strong> Simple clickable prototypes from static images. Good for quick demos.</li>
+            <li><strong>Code Prototypes:</strong> HTML/CSS/JS for testing technical feasibility or specific interactions.</li>
+          </ul>
+
+          <h3>Step-by-Step Instructions</h3>
+          <ol>
+            <li><strong>Define What You're Testing:</strong> What specific questions do you need answered? (e.g., "Can users complete onboarding in under 2 minutes?")</li>
+            <li><strong>Choose Fidelity Level:</strong> Low-fi for concepts and flows. High-fi for visual design and micro-interactions.</li>
+            <li><strong>Sketch the Flow:</strong> Map out the user journey on paper first. Identify critical screens and decision points.</li>
+            <li><strong>Build the Prototype:</strong> Create screens in your tool of choice. Add interactions (clicks, transitions). Focus on the critical path.</li>
+            <li><strong>Add Realistic Content:</strong> Replace placeholders with real or realistic data. Test with actual copy.</li>
+            <li><strong>Test with Users:</strong> Run 5-8 usability tests. Observe where users struggle. Don't explain—let them explore.</li>
+            <li><strong>Iterate:</strong> Fix major issues and test again. Repeat until the prototype validates your assumptions.</li>
+          </ol>
+
+          <h3>Example: Freelance Invoice App Prototype</h3>
+          <div class="example-box">
+            <p><strong>Goal:</strong> Test if freelancers can create and send their first invoice in under 2 minutes.</p>
+            
+            <p><strong>Fidelity:</strong> Mid-fidelity clickable prototype in Figma.</p>
+            
+            <p><strong>Key Screens:</strong></p>
+            <ul>
+              <li>Onboarding: "Create your first invoice" prompt</li>
+              <li>Invoice form: Client name, amount, due date, description</li>
+              <li>Preview screen: Review before sending</li>
+              <li>Confirmation: "Invoice sent! You'll be notified when paid."</li>
+            </ul>
+            
+            <p><strong>Interactions:</strong></p>
+            <ul>
+              <li>Click "Create Invoice" → Navigate to form</li>
+              <li>Fill fields → "Preview" button becomes active</li>
+              <li>Click "Send" → Show success animation + confirmation</li>
+            </ul>
+            
+            <p><strong>Test Scenario:</strong> "You just finished a logo design for a client. Create an invoice for $500, due in 30 days, and send it."</p>
+            
+            <p><strong>Success Metrics:</strong> 90% of users complete task in under 2 minutes without asking for help.</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="ai-copilot">
+        <h2>AI + Human Collaboration</h2>
+        
+        <div class="comparison-table">
+          <div class="comparison-column">
+            <h4>Human Value</h4>
+            <ul>
+              <li>Design intuition to craft intuitive, delightful user experiences</li>
+              <li>Contextual understanding of user needs and brand identity</li>
+              <li>Strategic judgment on what to prototype and test</li>
+              <li>Creative problem-solving for novel interaction patterns</li>
+            </ul>
+          </div>
+          <div class="comparison-column">
+            <h4>AI Value</h4>
+            <ul>
+              <li>Generation of wireframe and layout variations</li>
+              <li>Conversion of sketches to digital mockups</li>
+              <li>Auto-generation of UI components from design systems</li>
+              <li>Rapid iteration of visual design alternatives</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Key Considerations</h3>
+        <ul>
+          <li><strong>AI for Speed, Not Strategy:</strong> AI can generate wireframe variations quickly, but humans must decide which direction aligns with user needs and brand.</li>
+          <li><strong>Component Generation:</strong> AI can create UI components based on design systems, but humans must ensure consistency and usability.</li>
+          <li><strong>Interaction Design Limits:</strong> AI struggles with complex interaction patterns and animations. Humans must define the "feel" of the prototype.</li>
+        </ul>
+
+        <h3>"AI in the Loop" Model</h3>
+        <ol>
+          <li><strong>Wireframe Generation:</strong> AI generates multiple layout options based on content hierarchy and best practices. Humans select and refine the most promising direction.</li>
+          <li><strong>Design System Application:</strong> AI applies design tokens (colors, typography, spacing) from your design system to components. Humans review for brand consistency.</li>
+          <li><strong>Content Population:</strong> AI generates realistic placeholder content (names, descriptions, data) for prototypes. Humans validate for relevance and tone.</li>
+        </ol>
+
+        <h3>Watch-Outs</h3>
+        <ul>
+          <li>Don't let AI design the entire prototype. It lacks the contextual understanding of user needs, brand voice, and strategic goals.</li>
+          <li>Avoid AI-generated "dark patterns." Always review AI suggestions for ethical design and accessibility.</li>
+          <li>Be cautious of AI overcomplicating simple flows. Humans must simplify and prioritize user needs.</li>
+          <li>AI-generated designs may lack originality. Use AI to accelerate iteration, but inject human creativity for differentiation.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>
