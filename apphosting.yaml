@@ -1,0 +1,11 @@
+kind: "bundle"
+apiVersion: "v1"
+runConfig:
+  cpu: 1
+  memoryMiB: 512
+  minInstances: 0
+  maxInstances: 10
+  concurrency: 80
+scripts:
+  build: "npm run build"
+  run: "npm run start"
