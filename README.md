@@ -4,14 +4,37 @@ This project is a **"Skeleton"**—a solid, pre-built foundation that you can us
 
 ---
 
-## 🛠 Prerequisites (Do this first!)
+## 🛠 Prerequisites for Mac Users (Do this first!)
 
-Before you can start, you need two free tools installed on your computer:
+To get this app running, you need a few tools. We will use **Homebrew** (the most popular tool for Mac developers) to install everything automatically.
 
-1.  **Node.js**: This is what runs the website on your machine.
-    *   [Download it here (get the "LTS" version)](https://nodejs.org/)
-2.  **Git**: This is what downloads the code and tracks your changes.
-    *   [Download it here](https://git-scm.com/downloads)
+### 1. Open your Terminal
+Press `Cmd + Space` on your keyboard, type **Terminal**, and press Enter.
+
+### 2. Install Homebrew
+Copy and paste this command into your terminal and press Enter:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+*   **Note:** If it asks for your Mac password, type it and press Enter. You won't see the letters as you type—this is normal!
+
+### 3. Install Node.js and Git
+Once Homebrew is finished, copy and paste these two commands one by one:
+
+**For Node.js (Runs the app):**
+```bash
+brew install node
+```
+
+**For Git (Downloads the code):**
+```bash
+brew install git
+```
+
+### 4. Verify Installation
+Type these to make sure everything is installed correctly:
+- `node -v` (Should show a version number)
+- `git --version` (Should show a version number)
 
 ---
 
@@ -19,14 +42,11 @@ Before you can start, you need two free tools installed on your computer:
 
 We use a process called "Cloning" to download a copy of this project.
 
-1.  **Open your Terminal**:
-    *   **Mac**: Press `Cmd + Space` and type "Terminal".
-    *   **Windows**: Press the Start button and type "CMD" or "PowerShell".
-2.  **Copy and paste this command** into your terminal and press Enter:
+1.  **In your Terminal**, paste this command and press Enter:
     ```bash
     git clone https://github.com/The-Agentive-Labs/web-app.git
     ```
-3.  **Go into the folder** by typing:
+2.  **Go into the folder** by typing:
     ```bash
     cd web-app
     ```
