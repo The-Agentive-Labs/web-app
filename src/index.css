@@ -1414,3 +1414,373 @@ h1.hero-title {
     font-size: 0.6rem;
   }
 }
+
+/* =========================================
+   5 E's Journey Page
+   ========================================= */
+.journey-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(100px, 14vh, 160px) 2rem 4rem;
+}
+
+/* ── Header ── */
+.journey-header {
+  margin-bottom: 3rem;
+}
+
+.journey-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.journey-tag {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: var(--brand-primary-25);
+  color: var(--brand-primary-500);
+  border: 1px solid rgba(150, 59, 247, 0.15);
+  border-radius: var(--radius-round);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.journey-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-heading);
+  margin: 0 0 1rem;
+}
+
+.journey-purpose {
+  font-size: 1.15rem;
+  color: var(--color-text-body);
+  max-width: 620px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Five-Phase Flow ── */
+.journey-flow {
+  display: flex;
+  gap: 16px;
+  margin: 0 0 3.5rem;
+  padding: 1.75rem;
+  background: var(--color-surface-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-card);
+  overflow-x: auto;
+}
+
+.journey-step {
+  flex: 1;
+  min-width: 155px;
+  padding: 1.5rem 1.25rem;
+  background: var(--color-surface-page);
+  border: 2px solid rgba(150, 59, 247, 0.18);
+  border-radius: var(--m3-shape-large);
+  text-align: center;
+  position: relative;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.journey-step:hover {
+  border-color: var(--brand-primary-500);
+  transform: translateY(-3px);
+}
+
+.journey-step::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.35rem;
+  color: var(--brand-primary-400);
+  font-weight: bold;
+  z-index: 1;
+}
+
+.journey-step:last-child::after {
+  display: none;
+}
+
+.journey-step h4 {
+  color: var(--brand-primary-500);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.journey-step p {
+  font-size: 0.85rem;
+  color: var(--color-text-body);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ── Learn / Build Split ── */
+.journey-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.journey-section {
+  background: var(--color-surface-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-card);
+  padding: 2.5rem 2rem;
+}
+
+.journey-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0 0 1.75rem;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(150, 59, 247, 0.12);
+}
+
+.journey-section h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 2rem 0 0.75rem;
+}
+
+.journey-section h3:first-of-type {
+  margin-top: 0;
+}
+
+.journey-section p {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.65;
+  margin: 0 0 0.75rem;
+}
+
+.journey-section ul,
+.journey-section ol {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.journey-section li {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.55;
+}
+
+.journey-section li strong {
+  color: var(--color-text-heading);
+}
+
+/* ── Example Box ── */
+.journey-example-box {
+  background: linear-gradient(135deg, rgba(150, 59, 247, 0.04) 0%, rgba(249, 129, 75, 0.04) 100%);
+  border: 1px solid rgba(150, 59, 247, 0.12);
+  border-radius: var(--m3-shape-large);
+  padding: 1.75rem;
+  margin-top: 0.75rem;
+}
+
+.journey-example-box p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.journey-example-box p:last-child {
+  margin-bottom: 0;
+}
+
+.journey-example-box em {
+  color: var(--brand-primary-500);
+  font-style: italic;
+}
+
+/* ── AI + Human Section ── */
+.journey-ai-section {
+  background: var(--color-surface-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-card);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.journey-ai-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0 0 2rem;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(150, 59, 247, 0.12);
+}
+
+.journey-ai-section h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 2.5rem 0 0.75rem;
+}
+
+.journey-ai-section p {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.65;
+}
+
+.journey-ai-section ul,
+.journey-ai-section ol {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.journey-ai-section li {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.55;
+}
+
+.journey-ai-section li strong {
+  color: var(--color-text-heading);
+}
+
+/* ── Comparison Grid ── */
+.journey-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.journey-comparison-col {
+  background: var(--color-surface-page);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--m3-shape-large);
+  padding: 2rem 1.5rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.journey-comparison-col:hover {
+  border-color: var(--brand-primary-500);
+  transform: translateY(-3px);
+}
+
+.journey-comparison-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--brand-primary-25);
+  color: var(--brand-primary-500);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.journey-comparison-col h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0 0 1rem;
+}
+
+.journey-comparison-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.journey-comparison-col li {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.journey-comparison-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-primary-400);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .journey-split {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-page {
+    padding: 90px 1rem 2rem;
+  }
+
+  .journey-title {
+    font-size: 2rem;
+  }
+
+  .journey-flow {
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+
+  .journey-step {
+    min-width: 0;
+  }
+
+  .journey-step::after {
+    display: none;
+  }
+
+  .journey-section {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .journey-ai-section {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-title {
+    font-size: 1.65rem;
+  }
+
+  .journey-purpose {
+    font-size: 1rem;
+  }
+
+  .journey-comparison-col {
+    padding: 1.25rem 1rem;
+  }
+}
