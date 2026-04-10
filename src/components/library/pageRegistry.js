@@ -5,48 +5,56 @@
  * that the PatternPage template renders.
  */
 
-// ─── Navigation structure (used by ResearchLibrary sidebar) ───
+// ─── Navigation structure — Double Diamond ───
 export const LIBRARY_CATEGORIES = [
   {
-    title: 'Discovery & Research',
+    title: 'Phase 1: Discover / Explore',
     pages: [
       { slug: 'problem-hypothesis', label: 'Problem Hypothesis' },
+      { slug: 'steep-pestle', label: 'STEEP/PESTLE Analysis' },
+      { slug: 'set-analysis', label: 'SET Analysis' },
       { slug: 'secondary-research', label: 'Secondary Research' },
-      { slug: 'steep-pestle', label: 'STEEP/PESTLE' },
-      { slug: 'demographics', label: 'Demographics' },
       { slug: 'primary-research', label: 'Primary Research' },
+      { slug: 'qtv', label: 'QTV (Quantitative Research)' },
+      { slug: 'demographics', label: 'Demographic / Recruiting Strategy' },
+      { slug: 'discussion-guide', label: 'Design Research Discussion Guide' },
       { slug: 'aeiou', label: 'AEIOU Framework' },
       { slug: 'exploratory-interviews', label: 'Exploratory Interviews' },
       { slug: 'exploratory-surveys', label: 'Exploratory Surveys' },
-      { slug: 'discussion-guide', label: 'Discussion Guide' },
     ],
   },
   {
-    title: 'Synthesis & Definition',
+    title: 'Phase 2: Define',
     pages: [
-      { slug: 'set-analysis', label: 'SET Analysis' },
-      { slug: 'personas', label: 'Personas' },
+      // ── Transition: Discover → Define ──
       { slug: 'affinity-mapping', label: 'Affinity Mapping' },
       { slug: 'framing-lenses', label: 'Framing Lenses' },
-      { slug: 'directional-insights', label: 'Directional Insights' },
-      { slug: 'journey-mapping', label: 'User Journey Mapping' },
-    ],
-  },
-  {
-    title: 'Strategy & Planning',
-    pages: [
-      { slug: 'jtbd', label: 'Jobs to Be Done' },
-      { slug: '5es-journey', label: "5 E's Journey Mapping" },
+      // ── Synthesis & Strategy ──
       { slug: 'ira', label: 'IRA Framework' },
+      { slug: '5es-journey', label: "5 E's Journey Mapping" },
+      { slug: 'journey-mapping', label: 'User Journey Mapping' },
+      { slug: 'jtbd', label: 'Jobs to Be Done (JTBD)' },
+      { slug: 'personas', label: 'Persona Definition' },
+      { slug: 'card-sorting', label: 'Card Sorting' },
+      { slug: 'directional-insights', label: 'Directional Insights' },
       { slug: 'prfaq', label: 'PRFAQ' },
+      { slug: 'mrd', label: 'MRD (Market Requirements)' },
     ],
   },
   {
-    title: 'Execution & Testing',
+    title: 'Phase 3: Develop / Ideate',
     pages: [
+      { slug: 'prd', label: 'PRD (Product Requirements)' },
+      { slug: 'hmw', label: 'How Might We (HMW)' },
       { slug: 'low-fidelity', label: 'Low-Fidelity Design' },
-      { slug: 'prototyping', label: 'Prototyping' },
-      { slug: 'design-guide', label: 'Design Guide' },
+      { slug: 'prototyping', label: 'Prototyping (Vibecoding)' },
+      { slug: 'lofi-interviews', label: 'Low-Fidelity Design Interviews' },
+      { slug: 'design-guide', label: 'Design Guide & Principles' },
+    ],
+  },
+  {
+    title: 'Phase 4: Deliver / Validate',
+    pages: [
       { slug: 'testing', label: 'Testing' },
     ],
   },
