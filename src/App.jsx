@@ -6,6 +6,7 @@ import GooeyDoubleDiamondSection from './components/landing/GooeyDoubleDiamondSe
 import { DOUBLE_DIAMOND_PHASES } from './components/landing/doubleDiamondConstants'
 import { useLandingIntroAnimation } from './hooks/useLandingIntroAnimation'
 import FiveEsJourneyPage from './components/journey/FiveEsJourneyPage'
+import ResearchLibrary from './components/library/ResearchLibrary'
 
 /* ─────────────────────────────────────────────
    HomePage — extracted from the original App
@@ -159,11 +160,11 @@ function App() {
               </div>
               <span>Home</span>
             </Link>
-            <Link to="/5es-journey" className={`nav-item ${location.pathname === '/5es-journey' ? 'active' : ''}`}>
+            <Link to="/library" className={`nav-item ${location.pathname.startsWith('/library') ? 'active' : ''}`}>
               <div className="nav-icon">
-                <span className="material-symbols-rounded">account_tree</span>
+                <span className="material-symbols-rounded">menu_book</span>
               </div>
-              <span>Workflows</span>
+              <span>Library</span>
             </Link>
             <a href="#" className="nav-item">
               <div className="nav-icon">
@@ -214,6 +215,7 @@ function App() {
                 }
               />
               <Route path="/5es-journey" element={<FiveEsJourneyPage />} />
+              <Route path="/library/*" element={<ResearchLibrary />} />
             </Routes>
           </main>
         </div>
