@@ -1991,10 +1991,125 @@ h1.hero-title {
   padding: 0;
 }
 
+/* =========================================
+   Double Diamond Navigation Strip
+   ========================================= */
+
+/* Sticky wrapper — fixed to stay visible during scroll */
+.dd-nav-strip-sticky {
+  position: fixed;
+  top: 0;
+  left: calc(var(--sidebar-width, 200px) + 260px); /* main sidebar + library sidebar */
+  right: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--color-border-primary);
+  padding: 0.5rem 1.5rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--color-surface-page) 94%, transparent);
+}
+
+[data-theme='dark'] .dd-nav-strip-sticky {
+  background: color-mix(in srgb, var(--color-surface-page) 94%, transparent);
+}
+
+/* Push content down to account for the fixed strip */
+.library-content--has-strip {
+  padding-top: 120px;
+}
+
+/* The strip container */
+.dd-nav-strip {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* SVG sizing */
+.dd-nav-svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+}
+
+/* Diamond background fill */
+.dd-nav-diamond-bg {
+  fill: #e8e0f0;
+  transition: fill 0.3s ease;
+}
+
+[data-theme='dark'] .dd-nav-diamond-bg {
+  fill: #2a2435;
+}
+
+/* Clickable quadrant hover */
+.dd-nav-quadrant {
+  cursor: pointer;
+}
+
+.dd-nav-quadrant:hover path {
+  fill: rgba(150, 59, 247, 0.16) !important;
+}
+
+/* Phase labels row */
+.dd-nav-labels {
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+  justify-content: space-around;
+  gap: 0.25rem;
+}
+
+.dd-nav-label {
+  flex: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
+  opacity: 0.6;
+  padding: 0.25rem 0.1rem;
+  transition: all 0.25s ease;
+  border-radius: var(--m3-shape-small);
+  text-align: center;
+}
+
+.dd-nav-label:hover {
+  opacity: 1;
+  color: var(--brand-primary-500);
+}
+
+.dd-nav-label.active {
+  opacity: 1;
+  color: var(--brand-primary-500);
+  font-weight: 700;
+}
+
+/* Short label hidden on desktop, shown on mobile */
+.dd-nav-label-short {
+  display: none;
+}
+
+/* Active sidebar section title gets a subtle indicator */
+.library-nav-section-title.phase-active {
+  color: var(--brand-primary-500);
+}
+
 /* ── Library Responsive ── */
 @media (max-width: 900px) {
   .library-layout {
     grid-template-columns: 1fr;
+  }
+
+  .dd-nav-strip-sticky {
+    left: var(--sidebar-width, 200px);
   }
 
   .library-sidebar {
@@ -2061,6 +2176,38 @@ h1.hero-title {
   /* ── Library content padding ── */
   .library-content {
     padding: 0 0.5rem;
+  }
+
+  /* ── DD Nav Strip Mobile ── */
+  .dd-nav-strip-sticky {
+    padding: 0.35rem 0.75rem;
+  }
+
+  .dd-nav-strip {
+    max-width: 340px;
+  }
+
+  .dd-nav-label {
+    font-size: 0.62rem;
+    padding: 0.15rem 0;
+  }
+
+  .dd-nav-label-full {
+    display: none;
+  }
+
+  .dd-nav-label-short {
+    display: inline;
+  }
+
+  .dd-nav-strip-sticky {
+    left: 0;
+    top: 0;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .library-content--has-strip {
+    padding-top: 100px;
   }
 
   .library-content .journey-page {

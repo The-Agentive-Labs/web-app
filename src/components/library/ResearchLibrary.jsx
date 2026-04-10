@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { LIBRARY_CATEGORIES, PAGE_DATA } from './pageRegistry';
 import PatternPage from './PatternPage';
+import DoubleDiamondNav from './DoubleDiamondNav';
 
 /**
  * Library index / landing shown at /library
  */
-function LibraryIndex() {
+function LibraryIndex({ onPhaseClick, activePhase }) {
   return (
     <div className="journey-page">
       <motion.header
@@ -24,10 +25,13 @@ function LibraryIndex() {
         <h1 className="journey-title">Research Library</h1>
         <p className="journey-purpose">
           A hands-on library of proven product research processes. Each methodology
-          includes a Learn section (theory & best practices), a Build section
-          (templates & step-by-step instructions), and an AI + Human collaboration guide.
+          includes a Learn section (theory &amp; best practices), a Build section
+          (templates &amp; step-by-step instructions), and an AI + Human collaboration guide.
         </p>
       </motion.header>
+
+      {/* Double Diamond Visual — index view */}
+      <DoubleDiamondNav activePhase={activePhase} onPhaseClick={onPhaseClick} />
 
       <div className="library-index-grid">
         {LIBRARY_CATEGORIES.map((cat, ci) => (
@@ -80,17 +84,30 @@ function PageFromRegistry({ slug }) {
 }
 
 /**
+ * Determine which phase index (0–3) a slug belongs to, or null.
+ */
+function getPhaseIndex(slug) {
+  if (!slug) return null;
+  for (let i = 0; i < LIBRARY_CATEGORIES.length; i++) {
+    if (LIBRARY_CATEGORIES[i].pages.some((p) => p.slug === slug)) {
+      return i;
+    }
+  }
+  return null;
+}
+
+/**
  * ResearchLibrary — wrapper with collapsible sidebar + nested routes.
  */
 export default function ResearchLibrary() {
   const location = useLocation();
+  const currentSlug = location.pathname.split('/library/')[1] || '';
+  const activePhaseIndex = useMemo(() => getPhaseIndex(currentSlug), [currentSlug]);
+
   const [openCategories, setOpenCategories] = useState(() => {
     // Auto-open the category that contains the current page
-    const slug = location.pathname.split('/library/')[1];
-    const idx = LIBRARY_CATEGORIES.findIndex((cat) =>
-      cat.pages.some((p) => p.slug === slug)
-    );
-    return idx >= 0 ? { [idx]: true } : { 0: true };
+    const idx = activePhaseIndex;
+    return idx != null && idx >= 0 ? { [idx]: true } : { 0: true };
   });
 
   // Mobile sidebar collapse state
@@ -100,11 +117,21 @@ export default function ResearchLibrary() {
     setOpenCategories((prev) => ({ ...prev, [idx]: !prev[idx] }));
   };
 
-  const currentSlug = location.pathname.split('/library/')[1] || '';
-
   // Auto-close sidebar on route change (mobile)
   const handleNavClick = () => {
     setSidebarOpen(false);
+  };
+
+  // When a phase is clicked on the diamond, expand that category in the sidebar
+  const handlePhaseClick = (phaseIndex) => {
+    setOpenCategories((prev) => {
+      const newState = { ...prev };
+      // Toggle: if already open, close it; otherwise open it (and keep others as-is)
+      newState[phaseIndex] = !prev[phaseIndex];
+      // On mobile, also open the sidebar
+      return newState;
+    });
+    setSidebarOpen(true);
   };
 
   return (
@@ -128,7 +155,7 @@ export default function ResearchLibrary() {
           {LIBRARY_CATEGORIES.map((cat, ci) => (
             <nav key={cat.title} className="library-nav-section">
               <button
-                className={`library-nav-section-title ${openCategories[ci] ? 'open' : ''}`}
+                className={`library-nav-section-title ${openCategories[ci] ? 'open' : ''} ${activePhaseIndex === ci ? 'phase-active' : ''}`}
                 onClick={() => toggleCategory(ci)}
               >
                 {cat.title}
@@ -156,9 +183,16 @@ export default function ResearchLibrary() {
       </aside>
 
       {/* ── Library Content ── */}
-      <div className="library-content">
+      <div className={`library-content ${currentSlug ? 'library-content--has-strip' : ''}`}>
+        {/* Sticky Double Diamond strip — shown on individual pages */}
+        {currentSlug && (
+          <div className="dd-nav-strip-sticky">
+            <DoubleDiamondNav activePhase={activePhaseIndex} onPhaseClick={handlePhaseClick} />
+          </div>
+        )}
+
         <Routes>
-          <Route index element={<LibraryIndex />} />
+          <Route index element={<LibraryIndex onPhaseClick={handlePhaseClick} activePhase={activePhaseIndex} />} />
           {/* Dynamic route for all pages */}
           {LIBRARY_CATEGORIES.flatMap((cat) =>
             cat.pages.map((page) => (
