@@ -93,44 +93,66 @@ export default function ResearchLibrary() {
     return idx >= 0 ? { [idx]: true } : { 0: true };
   });
 
+  // Mobile sidebar collapse state
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const toggleCategory = (idx) => {
     setOpenCategories((prev) => ({ ...prev, [idx]: !prev[idx] }));
   };
 
   const currentSlug = location.pathname.split('/library/')[1] || '';
 
+  // Auto-close sidebar on route change (mobile)
+  const handleNavClick = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <div className="library-layout">
       {/* ── Library Sidebar ── */}
-      <aside className="library-sidebar">
-        <Link to="/library" className="library-sidebar-title">Research Library</Link>
+      <aside className={`library-sidebar ${sidebarOpen ? 'mobile-open' : ''}`}>
+        <div className="library-sidebar-header">
+          <Link to="/library" className="library-sidebar-title" onClick={handleNavClick}>
+            Research Library
+          </Link>
+          <button
+            className="library-sidebar-toggle"
+            onClick={() => setSidebarOpen((v) => !v)}
+            aria-label="Toggle library navigation"
+          >
+            {sidebarOpen ? '✕' : '☰'}
+          </button>
+        </div>
 
-        {LIBRARY_CATEGORIES.map((cat, ci) => (
-          <nav key={cat.title} className="library-nav-section">
-            <button
-              className={`library-nav-section-title ${openCategories[ci] ? 'open' : ''}`}
-              onClick={() => toggleCategory(ci)}
-            >
-              {cat.title}
-              <span className="library-expand-icon">▸</span>
-            </button>
+        <div className={`library-sidebar-nav ${sidebarOpen ? 'show' : ''}`}>
+          {LIBRARY_CATEGORIES.map((cat, ci) => (
+            <nav key={cat.title} className="library-nav-section">
+              <button
+                className={`library-nav-section-title ${openCategories[ci] ? 'open' : ''}`}
+                onClick={() => toggleCategory(ci)}
+              >
+                {cat.title}
+                <span className="library-expand-icon">▸</span>
+              </button>
 
-            {openCategories[ci] && (
-              <ul className="library-nav-links">
-                {cat.pages.map((page) => (
-                  <li key={page.slug}>
-                    <Link
-                      to={page.slug === '5es-journey' ? '/5es-journey' : `/library/${page.slug}`}
-                      className={`library-nav-link ${currentSlug === page.slug ? 'active' : ''}`}
-                    >
-                      {page.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </nav>
-        ))}
+              {openCategories[ci] && (
+                <ul className="library-nav-links">
+                  {cat.pages.map((page) => (
+                    <li key={page.slug}>
+                      <Link
+                        to={page.slug === '5es-journey' ? '/5es-journey' : `/library/${page.slug}`}
+                        className={`library-nav-link ${currentSlug === page.slug ? 'active' : ''}`}
+                        onClick={handleNavClick}
+                      >
+                        {page.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </nav>
+          ))}
+        </div>
       </aside>
 
       {/* ── Library Content ── */}
