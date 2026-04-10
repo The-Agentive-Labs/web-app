@@ -3562,4 +3562,815 @@ export const PAGE_DATA = {
   }
 },
 
+  "qtv": {
+  "slug": "qtv",
+  "title": "QTV (Quantitative Research)",
+  "tags": [
+    "Discovery",
+    "Data Analysis"
+  ],
+  "purpose": "Analyze measurable data and numerical patterns to understand the 'what, where, and when' of user behavior before exploring the 'why'.",
+  "learn": {
+    "sections": [
+      {
+        "title": "What is Quantitative Research?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Quantitative research focuses on measurable data and numerical analysis to understand the 'what, where, and when' of user behavior, often aiming for statistical significance. It draws insights from existing data sources like web analytics, customer satisfaction data, or support ticket volume to spot issues in the customer funnel."
+          },
+          {
+            "type": "p",
+            "text": "While quantitative research is valuable, customer conversations and observations are considered the primary tool for capturing the richness of human experience. Quantitative research answers the 'what, where, and when,' while qualitative research explores the 'why and how of decision making.' They are complementary."
+          }
+        ]
+      },
+      {
+        "title": "Framework & Placement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Quantitative methods support and complement the generative and formative research phases:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Discovery (Early Integration):</strong> Leverage existing data (secondary research) such as web analytics, customer satisfaction surveys, and other logs during the 'Uncover the Truth' phase.",
+              "<strong>Generative/Formative:</strong> Create surveys targeted at existing and prospective customers to answer basic questions, validate qualitative insights, or help prioritize the focus of customer interviews.",
+              "<strong>Evaluative/Validation:</strong> Product usage measurements and reporting can be used as Evaluative research to gauge usability and identify what needs fixing before shipping."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Best Practices",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Strategic Surveys:</strong> Design surveys to validate insights from qualitative studies or prioritize focus for deeper customer interviews. Capture thoughts, emotional reactions, and preferences (Attitudinal research).",
+              "<strong>Behavioral Metrics:</strong> Use analytics and log analysis to shed light on what people actually do—how they navigate and use a product (Behavioral research).",
+              "<strong>Triangulate:</strong> Never rely on just one data source. Quantitative research should complement primary research findings. Triangulate your problem space to get the full picture.",
+              "<strong>Spot Funnel Issues:</strong> Focus on identifying where users drop off, which channels get higher or lower marks, and what patterns exist in the data."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "build": {
+    "sections": [
+      {
+        "title": "When to Use QTV",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "You have existing data sources (web analytics, support tickets, CRM logs) that haven't been analyzed for user behavior patterns",
+              "You need to validate or quantify themes from qualitative interviews",
+              "You want to identify where in the funnel users are dropping off before asking 'why'",
+              "Stakeholders need reassurance that qualitative insights are backed by a large sample size"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Step-by-Step Instructions",
+        "blocks": [
+          {
+            "type": "ol",
+            "items": [
+              "<strong>Identify Data Sources:</strong> Audit available data: web analytics, app usage logs, customer satisfaction surveys, support tickets, NPS scores, sales CRM data.",
+              "<strong>Define the Questions:</strong> What are you trying to learn? Examples: 'Where do users drop off in onboarding?' or 'Which features have the highest/lowest engagement?'",
+              "<strong>Analyze Behavioral Patterns:</strong> Look for trends, anomalies, and correlations in the data. Segment by user type, behavior, or journey stage.",
+              "<strong>Create a Survey (if needed):</strong> Design a survey to validate or extend what the data shows. Keep it targeted and under 10 minutes.",
+              "<strong>Synthesize with Qualitative Data:</strong> Pair quantitative findings with qualitative insights. Numbers tell you 'what,' interviews tell you 'why.'",
+              "<strong>Present Findings:</strong> Create a concise report showing key metrics, trends, and implications. Use visuals (charts, funnels) to make patterns clear."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Example",
+        "blocks": [
+          {
+            "type": "example",
+            "items": [
+              "<strong>Scenario:</strong>",
+              "After identifying key pain points through interviews, the team sends a large-scale survey to 500 prospective customers to validate how common the newly discovered pain point (fear of judgment/failure) is, and to rank the importance of features like automation versus space-efficiency.",
+              "<strong>Result:</strong>",
+              "The survey reveals that 60% of respondents rank 'fear of failure' as their top concern—validating the qualitative insight and giving the team confidence to prioritize features that reduce risk and build confidence."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ai": {
+    "humanValue": [
+      "Identifying which data questions matter most strategically",
+      "Pairing quantitative data with rich qualitative context",
+      "Prioritizing high-value areas of opportunity from the data",
+      "Ensuring the analysis tells an authentic story grounded in user reality"
+    ],
+    "aiValue": [
+      "Processing large datasets (web analytics, support tickets) at speed",
+      "Finding non-obvious correlations (e.g., 'scrolling depth predicts retention')",
+      "Automating cross-tabulation and segmentation of survey data",
+      "Calculating statistical significance across multiple variables"
+    ],
+    "considerations": [
+      "<strong>Data Detective:</strong> AI can scan vast datasets to find non-obvious correlations that open new avenues for hypothesis generation.",
+      "<strong>Automated Synthesis:</strong> AI can instantly process thousands of responses, segmenting them by behavior or sentiment in seconds.",
+      "<strong>Significance Testing:</strong> AI can instantly flag whether a perceived trend is a real insight or just noise."
+    ],
+    "aiInLoop": [
+      "<strong>Pass 1 — Collect:</strong> AI ingests all available quantitative data sources and extracts key metrics, trends, and anomalies.",
+      "<strong>Pass 2 — Correlate:</strong> AI cross-references data points to surface hidden patterns (e.g., 'users who visit the About page 3x are 2x more likely to convert').",
+      "<strong>Pass 3 — Validate:</strong> Humans review AI-surfaced patterns, checking if they align with qualitative findings. AI calculates confidence intervals.",
+      "<strong>Pass 4 — Prioritize:</strong> AI scores findings by frequency × impact. Humans overlay strategic filters to decide what to act on."
+    ],
+    "watchOuts": [
+      "Quantitative data shows 'what' but not 'why.' Don't skip qualitative follow-up.",
+      "Correlation is not causation. AI may surface patterns that are coincidental, not meaningful.",
+      "Ensure data quality. AI analysis is only as good as the data it processes—garbage in, garbage out.",
+      "Don't let impressive charts substitute for genuine user understanding."
+    ]
+  }
+},
+
+  "card-sorting": {
+  "slug": "card-sorting",
+  "title": "Card Sorting",
+  "tags": [
+    "Define",
+    "Information Architecture"
+  ],
+  "purpose": "Understand how users naturally organize information to guide navigation structure and information architecture decisions.",
+  "learn": {
+    "sections": [
+      {
+        "title": "What is Card Sorting?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Card Sorting is a participatory research method where users sort 'cards' (representing concepts, features, or content) into groups to reveal how they naturally organize information. It helps define navigation structures and grouping logic based on user expectations rather than internal jargon."
+          },
+          {
+            "type": "p",
+            "text": "The focus is on Structure and Language—prioritizing clarity and 'findability' over design aesthetics. The process uses physical or digital cards that are grouped into clusters and labeled by participants."
+          }
+        ]
+      },
+      {
+        "title": "Framework & Placement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Card Sorting is the primary tool for defining Information Architecture:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Early Discovery:</strong> Occurs early to inform information architecture, navigation, or feature grouping. Conduct Open Sorts (users create categories) or Closed Sorts (users sort into pre-defined categories).",
+              "<strong>Refinement:</strong> Synthesize grouping patterns to create a draft IA or navigation structure. Feeds into sitemaps and navigation trees for testing."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Best Practices",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Choose the Right Format:</strong> Use Open Sorts to discover new categories and Closed Sorts to validate existing ones.",
+              "<strong>Avoid Overload:</strong> Do not use too many cards, as it causes cognitive fatigue and degrades data quality.",
+              "<strong>Look for Patterns:</strong> Evidence is found in similar thought processes between users, even if their specific groups differ. Look for the 'why' in their conversation.",
+              "<strong>Definition of Done:</strong> The team aligns on grouping patterns and category language, ready to move into tree testing or wireframes."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "build": {
+    "sections": [
+      {
+        "title": "When to Use Card Sorting",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "You're defining or redesigning a navigation structure",
+              "Internal labels don't match how users think about your content",
+              "You want to validate if your current IA makes sense to real users",
+              "You're building a new product and need to understand mental models around information grouping"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Step-by-Step Instructions",
+        "blocks": [
+          {
+            "type": "ol",
+            "items": [
+              "<strong>Prepare Cards:</strong> Write each concept, feature, or content item on a separate card. Keep labels clear and jargon-free. Aim for 30-60 cards.",
+              "<strong>Choose Format:</strong> Open Sort (users create their own groups and name them) or Closed Sort (users sort into pre-defined categories you provide).",
+              "<strong>Recruit Participants:</strong> 15-20 participants for statistically meaningful patterns. Can be done in-person or digitally (Optimal Workshop, Maze, etc.).",
+              "<strong>Run the Sort:</strong> Give participants the cards and ask them to group items that 'belong together.' For Open Sorts, ask them to name each group.",
+              "<strong>Analyze Results:</strong> Look for co-occurrence patterns—which items consistently end up together? What category names do users naturally use?",
+              "<strong>Synthesize into IA:</strong> Use the patterns to create a draft sitemap or navigation structure. Validate with a tree test if needed."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Example",
+        "blocks": [
+          {
+            "type": "example",
+            "items": [
+              "<strong>The Cards:</strong> 'Change Password,' 'Order History,' 'Saved Credit Cards,' 'Returns.'",
+              "<strong>User Grouping:</strong> Users consistently group these under 'My Wallet' instead of 'Settings.'",
+              "<strong>Insight:</strong> Users view financial tasks as distinct from general account preferences.",
+              "<strong>Impact:</strong> 'Wallet' becomes a top-level navigation item rather than being buried in Settings."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ai": {
+    "humanValue": [
+      "Interpreting the intent behind sorting (emotional vs. functional grouping)",
+      "Deciding which mental model best serves the product strategy",
+      "Understanding cultural or domain-specific context in user language",
+      "Making the final IA decisions that balance user needs with business goals"
+    ],
+    "aiValue": [
+      "Processing results from hundreds of digital card sorts instantly",
+      "Generating co-occurrence matrices showing probability of items being grouped together",
+      "Analyzing open-sort labels to find semantic centroids across varied naming",
+      "Flagging missing concepts by comparing against competitor structures"
+    ],
+    "considerations": [
+      "<strong>Cluster Analyst:</strong> AI can identify statistical probability of two items appearing in the same group across many participants.",
+      "<strong>Semantic Analysis:</strong> If 50 users create 50 different names for the same group, AI can suggest the most inclusive label.",
+      "<strong>Gap Detection:</strong> AI can scan the card set against competitor sites to flag missing concepts."
+    ],
+    "aiInLoop": [
+      "<strong>Pre-Sort:</strong> AI reviews existing navigation and competitor structures to suggest initial card sets and identify potential gaps.",
+      "<strong>Analysis:</strong> AI processes all sort results, generates dendrograms and co-occurrence matrices, and highlights clear patterns.",
+      "<strong>Naming:</strong> AI analyzes user-created group labels to suggest the most representative category names.",
+      "<strong>Validation:</strong> Humans review AI analysis against strategic context, making final IA decisions."
+    ],
+    "watchOuts": [
+      "AI looks for statistical overlap, not logical hierarchy. Items frequently used together may not belong in the same menu.",
+      "Don't replace the sort with AI suggestions. The value is in understanding how real users think.",
+      "Card sorting reveals mental models, not preferences. Users may sort logically but navigate emotionally.",
+      "Always follow up with tree testing to validate that the resulting structure actually works in practice."
+    ]
+  }
+},
+
+  "mrd": {
+  "slug": "mrd",
+  "title": "MRD (Market Requirements)",
+  "tags": [
+    "Define",
+    "Strategy"
+  ],
+  "purpose": "Translate market analysis and customer needs into actionable objectives, positioning the product within the competitive landscape.",
+  "learn": {
+    "sections": [
+      {
+        "title": "What is a Market Requirements Document?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A Market Requirements Document (MRD) translates market analysis and customer needs into actionable objectives, positioning the product effectively within the competitive landscape. It establishes the Product Manager as the voice of the customer, placing decision-making as close as possible to user needs."
+          },
+          {
+            "type": "p",
+            "text": "A comprehensive MRD requires rigorous strategic analysis and data-driven insights to define the target audience, market opportunities, and strategic positioning. This analysis must incorporate both quantitative data (real-time analytics, user behavior insights) and qualitative research (surveys, emotional experience capture)."
+          }
+        ]
+      },
+      {
+        "title": "Key Frameworks for MRD",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>RFM (Recency, Frequency, Monetary Value):</strong> Essential for customer segmentation. Tailor marketing messages to segmented groups to optimize spend and increase ROI.",
+              "<strong>The Four P's:</strong> Product attributes, Price alignment with perceived value, Place (distribution channels), and Promotion (consistent, targeted messaging).",
+              "<strong>PESTLE:</strong> Ensure the marketing strategy aligns with macro-environmental factors (Political, Economic, Sociocultural, Technological, Legal, Environmental).",
+              "<strong>JTBD:</strong> Capture the 'job' the customer is 'hiring' the product to do—including functional and emotional aspects—for messaging that resonates.",
+              "<strong>Behavioral Economics:</strong> Loss Aversion (minimizing perceived risk), Social Proof (leveraging reviews), and the Anchoring Effect (influencing perceived value through pricing).",
+              "<strong>Backcasting:</strong> Define a desired future market position and devise the necessary steps backward from that vision."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Best Practices",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Data-Driven Foundation:</strong> Ground every market assumption in real data—analytics, customer interviews, competitive analysis.",
+              "<strong>Customer-Centric Positioning:</strong> Frame the market opportunity around customer needs, not internal capabilities.",
+              "<strong>Cross-Functional Collaboration:</strong> Foster a culture of experimental thinking for testing and refining market messages before launch.",
+              "<strong>Ethical Marketing:</strong> Champion inclusivity and honest marketing. Adhere to compliance standards (IP, contracts, data security)."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "build": {
+    "sections": [
+      {
+        "title": "MRD Structure Template",
+        "blocks": [
+          {
+            "type": "code",
+            "text": "1. EXECUTIVE SUMMARY<br>   Brief overview of market opportunity and strategic positioning.<br><br>2. TARGET MARKET<br>   Customer segmentation (RFM analysis), demographic and behavioral profiles.<br><br>3. MARKET OPPORTUNITY<br>   Market size (TAM/SAM/SOM), growth trends, competitive landscape.<br><br>4. CUSTOMER NEEDS<br>   JTBD analysis, pain points, functional/emotional/social jobs.<br><br>5. COMPETITIVE ANALYSIS<br>   Positioning map, differentiators, competitor strengths/weaknesses.<br><br>6. STRATEGIC POSITIONING<br>   The Four P's, value proposition, messaging framework.<br><br>7. GO-TO-MARKET STRATEGY<br>   Distribution channels, pricing strategy, promotional plan.<br><br>8. SUCCESS METRICS<br>   KPIs, revenue targets, market share goals."
+          }
+        ]
+      },
+      {
+        "title": "Step-by-Step Instructions",
+        "blocks": [
+          {
+            "type": "ol",
+            "items": [
+              "<strong>Conduct Market Analysis:</strong> Use PESTLE to assess external factors. Identify market trends, competitor moves, and emerging opportunities.",
+              "<strong>Define Target Segments:</strong> Apply RFM analysis to existing customer data. Create behavioral profiles for each segment.",
+              "<strong>Capture Customer Jobs:</strong> Use JTBD framework to understand what customers are trying to achieve—functionally, emotionally, and socially.",
+              "<strong>Analyze Competition:</strong> Map competitors on a positioning grid. Identify whitespace opportunities and differentiators.",
+              "<strong>Build Positioning Strategy:</strong> Define the Four P's. Apply behavioral economics principles (social proof, anchoring) to pricing and messaging.",
+              "<strong>Create Go-to-Market Plan:</strong> Define channels, timing, and messaging. Use Backcasting from your desired market position.",
+              "<strong>Set Success Metrics:</strong> Define KPIs that tie back to customer outcomes, not just revenue targets."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Example",
+        "blocks": [
+          {
+            "type": "example",
+            "items": [
+              "<strong>Market Opportunity:</strong> The productivity tools market for SMBs is growing 12% YoY, but existing solutions are over-engineered for teams under 10 people.",
+              "<strong>Target Segment:</strong> Freelancers and micro-agencies (1-5 people) who currently use spreadsheets and email as their primary project management tools.",
+              "<strong>Core Job:</strong> 'When I'm juggling multiple client projects, I want to see everything in one place so I can stop feeling overwhelmed and start feeling in control.'",
+              "<strong>Positioning:</strong> Lightweight, affordable project management designed for teams who find Asana/Monday too complex."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ai": {
+    "humanValue": [
+      "Strategic leadership and long-term market vision (Backcasting)",
+      "Ethical and legal oversight of positioning and messaging",
+      "Navigating complex stakeholder dynamics and partnerships",
+      "Applying nuanced behavioral economics principles to campaigns"
+    ],
+    "aiValue": [
+      "Content and messaging generation at scale across channels",
+      "Data-driven customer segmentation using RFM and behavioral patterns",
+      "Rapid market trend synthesis from competitor data and industry reports",
+      "Automation of routine analysis and presentation creation"
+    ],
+    "considerations": [
+      "<strong>Copy Assistant:</strong> AI can generate dozens of messaging variations tailored to different channels (email, social, sales deck).",
+      "<strong>Data Segmentation:</strong> AI can instantly apply RFM logic to a database, identifying hidden 'Whale' or 'At-Risk' segments.",
+      "<strong>Trend Triangulation:</strong> AI can validate if proposed positioning actually aligns with current market realities."
+    ],
+    "aiInLoop": [
+      "<strong>Market Scanning:</strong> AI continuously monitors competitor pricing, positioning changes, and market sentiment shifts.",
+      "<strong>Segment Discovery:</strong> AI analyzes customer databases to surface non-obvious behavioral segments for targeting.",
+      "<strong>Message Testing:</strong> AI generates messaging variants for A/B testing, optimizing for different audience segments.",
+      "<strong>Human Strategy:</strong> Humans set the strategic direction, make ethical calls, and decide final positioning based on AI-surfaced data."
+    ],
+    "watchOuts": [
+      "AI models trained on biased data can amplify discrimination in targeting. Proactively audit datasets.",
+      "AI-generated messaging can sound corporate or generic. Human review is essential for authenticity.",
+      "Don't let AI substitute for genuine customer understanding. Data patterns are not the same as empathy.",
+      "Ensure all non-original content is appropriately attributed."
+    ]
+  }
+},
+
+  "prd": {
+  "slug": "prd",
+  "title": "PRD (Product Requirements)",
+  "tags": [
+    "Develop",
+    "Product Management"
+  ],
+  "purpose": "Summarize goals, features, and functionality of a proposed product or feature, translating verified prototypes into scalable, production-ready specifications.",
+  "learn": {
+    "sections": [
+      {
+        "title": "What is a Product Requirements Document?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A Product Requirements Document (PRD) serves as a key deliverable in product development, summarizing the goals, features, and functionality of a proposed product or feature. While modern product management has evolved toward Agile methodologies, the need for documentation remains critical for alignment and execution."
+          },
+          {
+            "type": "p",
+            "text": "The PRD transforms verified prototypes into scalable, production-ready forms. It establishes the Product Manager as the voice of the customer, ensuring cross-functional teams—particularly Engineering—have a clear, data-backed understanding of what to build and why."
+          }
+        ]
+      },
+      {
+        "title": "Key Frameworks for PRD",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>JTBD (Jobs to Be Done):</strong> Defines the underlying motivations and desired outcomes—the functional and emotional 'job' the customer is 'hiring' the product to do.",
+              "<strong>RICE:</strong> Feature prioritization using Reach, Impact, Confidence, and Effort to analytically determine what to include.",
+              "<strong>Backcasting:</strong> Aligns the PRD with long-term goals by defining a future state and working backward to identify milestones.",
+              "<strong>Customer Journey Map:</strong> Identifies pain points and touchpoints where feature development is needed.",
+              "<strong>PESTLE:</strong> Conducts an ethical audit ensuring the PRD accounts for broader macro-environmental factors."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Best Practices",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Ground in Research:</strong> Every requirement should trace back to validated user insights and tested prototypes.",
+              "<strong>Use RICE for Prioritization:</strong> Score features by Reach × Impact × Confidence ÷ Effort to make data-driven decisions.",
+              "<strong>Include Acceptance Criteria:</strong> Each requirement should have clear, testable success conditions.",
+              "<strong>Keep it Living:</strong> Use Kanban boards (To-Do, In Progress, Done) for task granularity and accountability.",
+              "<strong>Cross-functional Collaboration:</strong> Require shared goals, clear communication, and defined roles across teams."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "build": {
+    "sections": [
+      {
+        "title": "PRD Structure Template",
+        "blocks": [
+          {
+            "type": "code",
+            "text": "1. OVERVIEW<br>   Problem statement, target user, core JTBD.<br><br>2. GOALS & SUCCESS METRICS<br>   Business objectives, user outcomes, KPIs.<br><br>3. USER STORIES & REQUIREMENTS<br>   Functional requirements with RICE scores.<br>   Non-functional requirements (performance, security).<br><br>4. SCOPE<br>   In-scope features and explicit out-of-scope items.<br><br>5. DESIGN SPECIFICATIONS<br>   Wireframes, prototypes, interaction flows.<br><br>6. TECHNICAL CONSIDERATIONS<br>   Architecture constraints, API dependencies, data models.<br><br>7. ACCEPTANCE CRITERIA<br>   Testable conditions for each requirement.<br><br>8. TIMELINE & MILESTONES<br>   Sprint planning, dependencies, launch criteria."
+          }
+        ]
+      },
+      {
+        "title": "Step-by-Step Instructions",
+        "blocks": [
+          {
+            "type": "ol",
+            "items": [
+              "<strong>Define the Problem:</strong> Start with the JTBD. What job is the user hiring this product to do? Include functional, emotional, and social dimensions.",
+              "<strong>Set Goals & Metrics:</strong> Define measurable success criteria aligned with both user outcomes and business objectives.",
+              "<strong>Write User Stories:</strong> 'As a [user], I want [capability], so that [outcome].' Include acceptance criteria for each.",
+              "<strong>Prioritize with RICE:</strong> Score each feature/requirement. Focus engineering effort on high-impact, high-confidence items.",
+              "<strong>Define Scope:</strong> Be explicit about what's in and what's out. Prevent scope creep by documenting borders clearly.",
+              "<strong>Include Technical Context:</strong> Work with Engineering to document architecture constraints, API dependencies, and data requirements.",
+              "<strong>Review & Iterate:</strong> Share with cross-functional stakeholders. Incorporate feedback. The PRD is a living document."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Example",
+        "blocks": [
+          {
+            "type": "example",
+            "items": [
+              "<strong>Problem:</strong> Marketing team leads spend 2 days building quarterly reports by manually combining data from 5 different sources.",
+              "<strong>JTBD:</strong> 'When the QBR is in 48 hours, I want to pull, clean, and narrate cross-channel data in one pass, so I can look definitive, not defensive.'",
+              "<strong>Requirement:</strong> Auto-connect GA4, ad platforms, and social dashboards into a unified reporting view. RICE Score: 8.5/10.",
+              "<strong>Acceptance Criteria:</strong> User can generate a complete QBR deck in under 15 minutes from connected data sources."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ai": {
+    "humanValue": [
+      "Strategic leadership and product vision (long-term roadmap decisions)",
+      "Emotional and social negotiation with stakeholders",
+      "Ethical oversight and bias mitigation in AI-powered features",
+      "Defining functional needs as goal-oriented tasks with discrete steps"
+    ],
+    "aiValue": [
+      "Content generation and drafting of PRD sections at speed",
+      "Data insight synthesis—transforming raw analytics into actionable requirements",
+      "Feature exploration—suggesting diverse solutions based on a core JTBD",
+      "Gap and conflict detection—auditing the PRD for internal consistency"
+    ],
+    "considerations": [
+      "<strong>Feature Generator:</strong> AI can suggest a wide range of potential solutions based on the core JTBD, ensuring diverse approaches are considered.",
+      "<strong>Executive Assistant:</strong> AI can take rough notes from planning sessions and format them into a standard PRD structure.",
+      "<strong>Consistency Checker:</strong> AI can audit the PRD for gaps, contradictions, or missing acceptance criteria."
+    ],
+    "aiInLoop": [
+      "<strong>Drafting:</strong> AI generates initial PRD sections from research summaries, user stories from interviews, and technical specs from architecture docs.",
+      "<strong>Prioritization:</strong> AI applies RICE scoring to feature lists, giving humans a data-driven starting point for roadmap decisions.",
+      "<strong>Review:</strong> AI scans the PRD for internal consistency, missing edge cases, and alignment with stated goals.",
+      "<strong>Living Doc:</strong> AI monitors the codebase and updates the PRD when implementations diverge from specifications."
+    ],
+    "watchOuts": [
+      "AI may suggest features that are technically feasible but operationally impossible for your team. Human review is essential.",
+      "Training data biases can lead to discriminatory feature suggestions. Proactively audit AI recommendations.",
+      "Don't let AI-generated PRDs substitute for genuine cross-functional alignment conversations.",
+      "Ensure data quality. AI-generated insights are only as good as the data feeding them."
+    ]
+  }
+},
+
+  "hmw": {
+  "slug": "hmw",
+  "title": "How Might We (HMW)",
+  "tags": [
+    "Ideate",
+    "Innovation"
+  ],
+  "purpose": "Translate research insights and problem statements into actionable, optimistic questions that fuel ideation and open the solution space.",
+  "learn": {
+    "sections": [
+      {
+        "title": "What is How Might We?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "'How Might We' (HMW) is a core technique in Design Thinking used to translate research insights and problem statements into actionable, optimistic questions that fuel ideation. It serves as the critical bridge between the Define phase (understanding the problem) and the Ideate phase (generating solutions)."
+          },
+          {
+            "type": "p",
+            "text": "The HMW question is defined by its structure: 'How' suggests that solutions exist and are waiting to be discovered. 'Might' emphasizes that ideas are exploratory, allowing divergent thinking without pressure. 'We' frames the activity as collaborative, reinforcing teamwork."
+          }
+        ]
+      },
+      {
+        "title": "Framework & Placement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "HMW questions are the critical pivot point that marks the transition from synthesis to active ideation:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Define (Output):</strong> HMW questions are the final output of the Define phase. They are generated directly from research synthesis, personas, empathy maps, and journey map insights.",
+              "<strong>Ideate (Input):</strong> HMW questions are the primary input and prompts for brainstorming sessions (e.g., Crazy 8s, SCAMPER). The team generates ideas in response to the prioritized HMW questions."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Best Practices",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Ground in Real Insights:</strong> Every HMW should be directly traceable to a validated user insight or quote.",
+              "<strong>Don't Embed a Solution:</strong> Bad: 'HMW create a louder notification alert?' Good: 'HMW help users feel confident that they haven't missed anything important?'",
+              "<strong>Generate Many Variations:</strong> For a single insight, generate multiple HMWs. Play with scope and focus to explore different facets.",
+              "<strong>Keep it Positive:</strong> Bad: 'HMW stop users from getting frustrated during checkout?' Good: 'HMW make checkout feel effortless and rewarding?'",
+              "<strong>Cluster & Prioritize:</strong> After generating a large volume, group by common themes. Use dot voting to select the 1-3 most critical to carry forward."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "build": {
+    "sections": [
+      {
+        "title": "Template: HMW Generation",
+        "blocks": [
+          {
+            "type": "code",
+            "text": "INSIGHT (from research):<br>[A synthesized truth about user behavior, need, or struggle]<br><br>HMW QUESTIONS:<br>• How might we [address the core need]?<br>• How might we [change the emotional experience]?<br>• How might we [remove the barrier]?<br>• How might we [leverage what's already working]?<br>• How might we [reframe the constraint as an opportunity]?"
+          }
+        ]
+      },
+      {
+        "title": "Step-by-Step Instructions",
+        "blocks": [
+          {
+            "type": "ol",
+            "items": [
+              "<strong>Start with Insights:</strong> Pull your top 3-5 validated insights from Affinity Mapping, Framing Lenses, or IRA.",
+              "<strong>Write the First HMW:</strong> Take one insight and rephrase it as a 'How Might We...' question. Focus on the opportunity, not the solution.",
+              "<strong>Generate Variations:</strong> For each insight, write 3-5 HMW questions with different angles: functional, emotional, social, or systemic.",
+              "<strong>Capture on Sticky Notes:</strong> One HMW per note. This enables physical or digital sorting.",
+              "<strong>Cluster by Theme:</strong> Group similar HMWs together. Label each cluster.",
+              "<strong>Prioritize:</strong> Use dot voting or impact/feasibility matrix to select the top 1-3 HMWs to bring into brainstorming.",
+              "<strong>Ideate:</strong> Use the selected HMWs as prompts for Crazy 8s, brainwriting, or structured brainstorming sessions."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Example",
+        "blocks": [
+          {
+            "type": "example",
+            "items": [
+              "<strong>Insight:</strong> 'During homework, parents feel frustrated and disconnected because they don't understand the new teaching methods and feel ill-equipped to help.'",
+              "<strong>HMW Variations:</strong>",
+              "• HMW bridge the communication gap between teachers' methods and parents' understanding?",
+              "• HMW empower parents to feel like confident 'homework coaches' rather than 'confused students'?",
+              "• HMW make the homework process a moment for positive connection instead of family conflict?",
+              "• HMW provide parents with just-in-time, 'bite-sized' support precisely when they need it?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ai": {
+    "humanValue": [
+      "Identifying latent needs and emotional nuance from research",
+      "Curating and prioritizing which HMWs are strategically valuable and ethical",
+      "Ensuring HMWs remain grounded in authentic user stories, not generic patterns",
+      "Making the final decision on which questions to invest ideation energy in"
+    ],
+    "aiValue": [
+      "Pattern recognition across thousands of feedback entries to surface recurring themes",
+      "Generating hundreds of HMW variants from a single insight for divergent exploration",
+      "Cross-referencing insights against industry benchmarks to identify unique angles",
+      "Accelerating synthesis of raw research data into structured insight statements"
+    ],
+    "considerations": [
+      "<strong>Divergent Thinking Partner:</strong> AI is perfect for 'throwing hundreds of ideas on the wall'—generating vast numbers of HMW variations the team might miss.",
+      "<strong>Synthesis Accelerator:</strong> AI can instantly cluster raw research into themes, freeing humans for strategic analysis.",
+      "<strong>Validation Check:</strong> AI can confirm if a perceived pain point is widespread by scanning all customer data."
+    ],
+    "aiInLoop": [
+      "<strong>Research Synthesis:</strong> AI processes transcripts and surveys to surface top themes as 'Insight Candidates.'",
+      "<strong>HMW Generation:</strong> Humans provide a core insight. AI generates 50+ HMW variations across functional, emotional, and social angles.",
+      "<strong>Human Curation:</strong> The team reviews AI output, filtering low-value questions and elevating the most inspiring ones.",
+      "<strong>Ideation Input:</strong> The curated, top-priority HMWs become the prompts for structured brainstorming sessions."
+    ],
+    "watchOuts": [
+      "AI-generated HMWs can be generic or lack deep empathy. Human oversight is critical for quality.",
+      "Don't embed solutions in HMWs—AI may default to feature-oriented phrasing. Review for true openness.",
+      "Avoid using only AI for synthesis without human review, as subtle context (sarcasm, hesitation) may be missed.",
+      "HMWs are about quality, not quantity. Don't let AI volume overwhelm strategic focus."
+    ]
+  }
+},
+
+  "lofi-interviews": {
+  "slug": "lofi-interviews",
+  "title": "Low-Fidelity Design Interviews",
+  "tags": [
+    "Develop",
+    "Design Validation"
+  ],
+  "purpose": "Test rough designs with users to validate understanding, direction, and usefulness before committing to high-fidelity mockups or development.",
+  "learn": {
+    "sections": [
+      {
+        "title": "What are Low-Fidelity Design Interviews?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Low-Fidelity Design Interviews are qualitative sessions where researchers show rough designs (sketches, wireframes) to users to test understanding and usefulness before committing to high-fidelity mockups or development work."
+          },
+          {
+            "type": "p",
+            "text": "The focus is on Concept Direction and Comprehension—asking 'Do you understand what is happening here?' rather than 'Do you like how this looks?' The process produces annotated designs and updated hypotheses based on user feedback."
+          }
+        ]
+      },
+      {
+        "title": "Framework & Placement",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "These interviews serve as the primary validation gate in the early design phase:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Conception:</strong> Occurs before committing to hi-fi mockups. Present designs within a user scenario and encourage 'think-aloud' feedback.",
+              "<strong>Refinement:</strong> Feeds directly into design refinement. Identify core gaps or confusion points to fix before investing in polish."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Best Practices",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Frame with Context:</strong> Start by giving the user a scenario so they understand the goal, then show the sketch.",
+              "<strong>Don't Explain:</strong> A common pitfall is explaining the design. Instead, ask 'What do you think is happening here?' and let the user interpret.",
+              "<strong>Listen, Don't Defend:</strong> If a user is confused, it is a design failure, not a user failure. Collect confusion points without defending the work.",
+              "<strong>Focus on Comprehension:</strong> Look for clarity on what resonates and what confuses. Identify early usability issues.",
+              "<strong>Keep it Rough:</strong> The rougher the design, the more honest the feedback. Polished designs make people reluctant to criticize."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "build": {
+    "sections": [
+      {
+        "title": "When to Use Lo-Fi Interviews",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "You have early sketches, wireframes, or paper prototypes ready for feedback",
+              "You want to validate concept direction before investing in visual design",
+              "You need to test if core interaction patterns and navigation are intuitive",
+              "You want to identify fundamental misunderstandings early and cheaply"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Step-by-Step Instructions",
+        "blocks": [
+          {
+            "type": "ol",
+            "items": [
+              "<strong>Prepare the Sketches:</strong> Use hand-drawn wireframes, whiteboard sketches, or simple digital wireframes. Keep them intentionally rough to invite honest feedback.",
+              "<strong>Write a Scenario:</strong> Create a realistic task for the user: 'Imagine you just received an email saying your report is ready. Walk me through what you'd do next.'",
+              "<strong>Set the Stage:</strong> Tell the participant: 'This is early work. Nothing is final. I want to know what makes sense and what doesn't. You can't hurt my feelings.'",
+              "<strong>Show, Don't Tell:</strong> Present the sketch and ask: 'What do you think is happening here?' Watch where their eyes go. Note hesitation.",
+              "<strong>Probe Confusion:</strong> When they hesitate, ask: 'What were you expecting to see?' or 'What would make this clearer?'",
+              "<strong>Document Everything:</strong> Capture quotes, confusion points, and annotations directly on copies of the sketches.",
+              "<strong>Synthesize:</strong> After 3-5 sessions, cluster feedback by theme. Identify clear patterns in confusion vs. comprehension."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Example",
+        "blocks": [
+          {
+            "type": "example",
+            "items": [
+              "<strong>The Sketch:</strong> A rough drawing of a dashboard with a 'Magic Button.'",
+              "<strong>The Question:</strong> 'What do you think happens if you press this?'",
+              "<strong>The User:</strong> 'I have no idea. Maybe it deletes everything?'",
+              "<strong>The Insight:</strong> The icon is unclear. The visual language needs redesign before high-fidelity work begins.",
+              "<strong>Impact:</strong> The team redesigns the button with a clear label and tooltip, preventing a critical usability issue from reaching production."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ai": {
+    "humanValue": [
+      "Facilitating the session and reading non-verbal subtext (hesitation, frowns)",
+      "Creating psychological safety so participants feel comfortable criticizing work",
+      "Probing deeper when something 'feels off' based on human intuition",
+      "Making design decisions based on the synthesis of feedback and strategic context"
+    ],
+    "aiValue": [
+      "Real-time transcription of 'think-aloud' sessions",
+      "Sentiment tracking mapped to specific areas of the wireframe",
+      "Theme synthesis across multiple interview sessions automatically",
+      "Frequency tracking to prevent recency bias ('4 out of 5 users failed here')"
+    ],
+    "considerations": [
+      "<strong>Real-Time Scribe:</strong> AI transcribes the session and maps user sentiment to specific areas of the wireframe.",
+      "<strong>Theme Synthesis:</strong> AI identifies the top 3 confusion points across 5 transcripts automatically.",
+      "<strong>Validation Scoring:</strong> AI tracks frequency of specific feedback to prevent recency bias."
+    ],
+    "aiInLoop": [
+      "<strong>Preparation:</strong> AI reviews the wireframes and generates potential 'What do you think is happening here?' prompts for each screen.",
+      "<strong>During Session:</strong> AI transcribes in real-time and flags moments of confusion or negative sentiment for follow-up.",
+      "<strong>Post-Session:</strong> AI synthesizes feedback themes across all sessions, tagging by category (Navigation Issue, Value Prop Confusion, Missing Feature).",
+      "<strong>Design Update:</strong> Humans prioritize fixes based on AI-synthesized patterns, then iterate on the sketches."
+    ],
+    "watchOuts": [
+      "AI struggles to interpret silence or physical gestures (like pointing at the screen) unless using video analysis.",
+      "It captures what was said, but not always how the user struggled. Human observation fills this gap.",
+      "Don't use AI-generated designs for lo-fi interviews—the point is intentionally rough artifacts that invite criticism.",
+      "Avoid over-polishing lo-fi work. If it looks 'done,' users will comment on aesthetics instead of comprehension."
+    ]
+  }
+},
+
 };
