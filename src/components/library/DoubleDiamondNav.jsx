@@ -161,7 +161,6 @@ export default function DoubleDiamondNav({ activePhase, currentSlug }) {
             transition={{ duration: 0.18, ease: 'easeOut' }}
             onMouseEnter={handlePopoverEnter}
             onMouseLeave={handlePopoverLeave}
-            ref={popoverRef}
           >
             <div className="dd-mini-popover-arrow" />
             <div className="dd-mini-popover-title">{hoveredTitle}</div>
