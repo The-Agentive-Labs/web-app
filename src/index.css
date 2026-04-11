@@ -2021,12 +2021,12 @@ h1.hero-title {
 }
 
 .library-content--has-strip {
-  padding-top: 135px;
+  padding-top: 155px;
 }
 
 /* ── Mini diamond wrapper — mirrors .dd-gooey-wrap ── */
 .dd-mini-wrap {
-  --dd-mini-size: 80px;
+  --dd-mini-size: 100px;
   position: relative;
   width: 100%;
   display: flex;
@@ -2056,11 +2056,28 @@ h1.hero-title {
   border-radius: 26%;
   background: #e8e0f0;
   transform: rotate(45deg);
-  transition: background 0.3s ease;
+  transition: background 0.4s ease;
+}
+
+/* Per-quadrant shading — left half of rotated square ≈ one phase */
+.dd-mini-diamond[data-active-half='left'] {
+  background: linear-gradient(to bottom right, #c4b0e4 50%, #e8e0f0 50%);
+}
+
+.dd-mini-diamond[data-active-half='right'] {
+  background: linear-gradient(to bottom right, #e8e0f0 50%, #c4b0e4 50%);
 }
 
 [data-theme='dark'] .dd-mini-diamond {
   background: #2a2435;
+}
+
+[data-theme='dark'] .dd-mini-diamond[data-active-half='left'] {
+  background: linear-gradient(to bottom right, #3d2f5c 50%, #2a2435 50%);
+}
+
+[data-theme='dark'] .dd-mini-diamond[data-active-half='right'] {
+  background: linear-gradient(to bottom right, #2a2435 50%, #3d2f5c 50%);
 }
 
 /* ── Dashed divider lines — mirrors .dd-dashed-lines ── */
@@ -2154,14 +2171,7 @@ h1.hero-title {
   opacity: 1;
 }
 
-/* ── Active diamond darker shading ── */
-.dd-mini-diamond--active {
-  background: #c9b8e8 !important;
-}
-
-[data-theme='dark'] .dd-mini-diamond--active {
-  background: #3d2f5c !important;
-}
+/* Old active class removed — now using data-active-half gradients above */
 
 /* ── Hover popover bubble ── */
 .dd-mini-popover {
@@ -2348,7 +2358,7 @@ h1.hero-title {
   }
 
   .dd-mini-wrap {
-    --dd-mini-size: 52px;
+    --dd-mini-size: 64px;
   }
 
   .dd-mini-phase-label {

@@ -108,8 +108,8 @@ export default function DoubleDiamondNav({ activePhase, currentSlug }) {
 
       {/* Gooey diamond container */}
       <div className="dd-mini-gooey">
-        <div className={`dd-mini-diamond dd-mini-d1 ${activePhase === 0 || activePhase === 1 ? 'dd-mini-diamond--active' : ''}`} />
-        <div className={`dd-mini-diamond dd-mini-d2 ${activePhase === 2 || activePhase === 3 ? 'dd-mini-diamond--active' : ''}`} />
+        <div className={`dd-mini-diamond dd-mini-d1`} data-active-half={activePhase === 0 ? 'left' : activePhase === 1 ? 'right' : 'none'} />
+        <div className={`dd-mini-diamond dd-mini-d2`} data-active-half={activePhase === 2 ? 'left' : activePhase === 3 ? 'right' : 'none'} />
       </div>
 
       {/* Dashed vertical dividers */}
