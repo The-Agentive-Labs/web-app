@@ -1,6 +1,7 @@
 import { useEffect, useRef, forwardRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { DOUBLE_DIAMOND_CURSOR_TRAIL_COUNT } from './doubleDiamondConstants';
+import { hasIntroPlayed } from '../../hooks/useLandingIntroAnimation';
 
 /**
  * SVG gooey filter + two diamonds, dashed guides, phase buttons, and the orange glow cursor trail.
@@ -16,6 +17,7 @@ const GooeyDoubleDiamondSection = forwardRef(function GooeyDoubleDiamondSection(
   },
   ref,
 ) {
+  const played = hasIntroPlayed();
   const cursorRef = useRef(null);
   const trailRefs = useRef([]);
   const wrapRef = useRef(null);
@@ -113,21 +115,21 @@ const GooeyDoubleDiamondSection = forwardRef(function GooeyDoubleDiamondSection(
         <div className="dd-gooey">
           <motion.div
             className="dd-d1 dd-diamond"
-            initial={{ opacity: 0, scale: 0, rotate: 45 }}
+            initial={played ? { opacity: 1, scale: 1, rotate: 45 } : { opacity: 0, scale: 0, rotate: 45 }}
           />
           <motion.div
             className="dd-d2 dd-diamond"
-            initial={{ opacity: 0, scale: 0, rotate: 45 }}
+            initial={played ? { opacity: 1, scale: 1, rotate: 45 } : { opacity: 0, scale: 0, rotate: 45 }}
           />
         </div>
 
-        <motion.div className="dd-dashed-lines" initial={{ opacity: 0 }}>
+        <motion.div className="dd-dashed-lines" initial={played ? { opacity: 1 } : { opacity: 0 }}>
           <div className="dd-dashed-line" />
           <div className="dd-dashed-line" />
           <div className="dd-dashed-line" />
         </motion.div>
 
-        <motion.div className="dd-phase-row" initial={{ opacity: 0 }}>
+        <motion.div className="dd-phase-row" initial={played ? { opacity: 1 } : { opacity: 0 }}>
           {phases.map(({ key, label }) => (
             <button
               key={key}

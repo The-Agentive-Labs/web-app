@@ -4,7 +4,7 @@ import { motion, useAnimate } from 'framer-motion'
 import LandingHero from './components/landing/LandingHero'
 import GooeyDoubleDiamondSection from './components/landing/GooeyDoubleDiamondSection'
 import { DOUBLE_DIAMOND_PHASES } from './components/landing/doubleDiamondConstants'
-import { useLandingIntroAnimation } from './hooks/useLandingIntroAnimation'
+import { useLandingIntroAnimation, hasIntroPlayed } from './hooks/useLandingIntroAnimation'
 import FiveEsJourneyPage from './components/journey/FiveEsJourneyPage'
 import ResearchLibrary from './components/library/ResearchLibrary'
 
@@ -141,8 +141,8 @@ function App() {
 
   return (
     <div ref={scope} className={`page-wrapper ${isDark ? 'dark-mode' : ''} dd-page`}>
-      {/* Logo loader — only on home */}
-      {isHome && (
+      {/* Logo loader — only on first home visit (before intro completes) */}
+      {isHome && !hasIntroPlayed() && (
         <div className="dd-logo-stage" aria-hidden="true">
           <motion.img
             src="/logo2.png"

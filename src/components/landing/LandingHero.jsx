@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import GlassButton from '../GlassButton';
+import { hasIntroPlayed } from '../../hooks/useLandingIntroAnimation';
 
 /**
  * Hero headline, supporting copy, and primary CTA. Pairs with `useLandingIntroAnimation`
@@ -11,18 +12,20 @@ export default function LandingHero({
   ctaLabel = 'Get Started ❤️',
   onCtaClick,
 }) {
+  const played = hasIntroPlayed();
+
   return (
     <>
       <div className="dd-hero-text">
-        <motion.h1 className="dd-hero-title" initial={{ opacity: 0, y: 24 }}>
+        <motion.h1 className="dd-hero-title" initial={played ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}>
           {title}
         </motion.h1>
-        <motion.p className="dd-hero-sub" initial={{ opacity: 0, y: 20 }}>
+        <motion.p className="dd-hero-sub" initial={played ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}>
           {subtitle}
         </motion.p>
       </div>
 
-      <motion.div className="dd-about-wrap" initial={{ opacity: 0, y: 16 }}>
+      <motion.div className="dd-about-wrap" initial={played ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}>
         <GlassButton onClick={onCtaClick}>{ctaLabel}</GlassButton>
       </motion.div>
     </>

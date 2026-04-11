@@ -1,5 +1,9 @@
 import { useEffect, useRef } from 'react';
 
+/** Module-level flag — once the intro has played, skip it on subsequent visits */
+let introHasCompleted = false;
+export function hasIntroPlayed() { return introHasCompleted; }
+
 /**
  * One-shot intro sequence for the double-diamond landing: logo, diamond merge,
  * then reveals nav, hero copy, CTA, and phase row. Targets `.dd-*` descendants of scopeRef.
@@ -105,6 +109,7 @@ export function useLandingIntroAnimation(scopeRef, gooeyWrapRef, animate) {
       ]);
 
       document.body.style.overflow = '';
+      introHasCompleted = true;
     };
 
     run();
