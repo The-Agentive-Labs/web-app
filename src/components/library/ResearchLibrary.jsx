@@ -8,7 +8,7 @@ import DoubleDiamondNav from './DoubleDiamondNav';
 /**
  * Library index / landing shown at /library
  */
-function LibraryIndex({ onPhaseClick, activePhase }) {
+function LibraryIndex({ activePhase, currentSlug }) {
   return (
     <div className="journey-page">
       <motion.header
@@ -31,7 +31,7 @@ function LibraryIndex({ onPhaseClick, activePhase }) {
       </motion.header>
 
       {/* Double Diamond Visual — index view */}
-      <DoubleDiamondNav activePhase={activePhase} onPhaseClick={onPhaseClick} />
+      <DoubleDiamondNav activePhase={activePhase} currentSlug={currentSlug} />
 
       <div className="library-index-grid">
         {LIBRARY_CATEGORIES.map((cat, ci) => (
@@ -104,13 +104,6 @@ export default function ResearchLibrary() {
   const currentSlug = location.pathname.split('/library/')[1] || '';
   const activePhaseIndex = useMemo(() => getPhaseIndex(currentSlug), [currentSlug]);
 
-  // When a phase is clicked on the diamond, navigate to that phase's index
-  // (no sidebar to expand — diamond strip is the wayfinding)
-  const handlePhaseClick = (phaseIndex) => {
-    // Could navigate to the first page in that phase, or just act as a visual indicator
-    // For now it's a no-op highlight — the user clicks pages from the index grid
-  };
-
   return (
     <div className="library-layout library-layout--no-sidebar">
       {/* ── Library Content ── */}
@@ -118,12 +111,12 @@ export default function ResearchLibrary() {
         {/* Fixed Double Diamond strip — shown on individual pages */}
         {currentSlug && (
           <div className="dd-nav-strip-sticky">
-            <DoubleDiamondNav activePhase={activePhaseIndex} onPhaseClick={handlePhaseClick} />
+            <DoubleDiamondNav activePhase={activePhaseIndex} currentSlug={currentSlug} />
           </div>
         )}
 
         <Routes>
-          <Route index element={<LibraryIndex onPhaseClick={handlePhaseClick} activePhase={activePhaseIndex} />} />
+          <Route index element={<LibraryIndex activePhase={activePhaseIndex} currentSlug={currentSlug} />} />
           {/* Dynamic route for all pages */}
           {LIBRARY_CATEGORIES.flatMap((cat) =>
             cat.pages.map((page) => (
