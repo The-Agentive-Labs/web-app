@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react'
-import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import { useState, useRef, useCallback } from 'react'
+import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, useAnimate } from 'framer-motion'
 import LandingHero from './components/landing/LandingHero'
 import GooeyDoubleDiamondSection from './components/landing/GooeyDoubleDiamondSection'
@@ -12,6 +12,21 @@ import ResearchLibrary from './components/library/ResearchLibrary'
    HomePage — extracted from the original App
    ───────────────────────────────────────────── */
 function HomePage({ scrollToDiamonds, gooeyWrapRef, activePhase, setActivePhase }) {
+  const navigate = useNavigate();
+
+  // Map homepage phase keys to the first library page in that phase
+  const PHASE_FIRST_PAGE = {
+    discover: '/library/problem-hypothesis',
+    define:   '/library/affinity-mapping',
+    develop:  '/library/prd',
+    deliver:  '/library/testing',
+  };
+
+  const handlePhaseClick = useCallback((key) => {
+    const target = PHASE_FIRST_PAGE[key];
+    if (target) navigate(target);
+  }, [navigate]);
+
   return (
     <>
       <div className="dd-hero-content">
@@ -25,14 +40,14 @@ function HomePage({ scrollToDiamonds, gooeyWrapRef, activePhase, setActivePhase 
           }
           subtitle="A hands-on library of proven product processes, inspired by frameworks like Double Diamond, and designed for AI-Human Harmony."
           ctaLabel="Get Started ❤️"
-          onCtaClick={scrollToDiamonds}
+          onCtaClick={() => navigate('/library')}
         />
         <GooeyDoubleDiamondSection
           ref={gooeyWrapRef}
           phases={DOUBLE_DIAMOND_PHASES}
           activePhase={activePhase}
           onPhaseHoverChange={setActivePhase}
-          onPhaseClick={(key) => console.log(key)}
+          onPhaseClick={handlePhaseClick}
         />
       </div>
 

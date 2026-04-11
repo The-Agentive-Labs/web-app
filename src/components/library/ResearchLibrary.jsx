@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect, useRef } from 'react';
 import { Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { LIBRARY_CATEGORIES, PAGE_DATA } from './pageRegistry';
 import PatternPage from './PatternPage';
 import DoubleDiamondNav from './DoubleDiamondNav';
@@ -96,6 +96,13 @@ function getPhaseIndex(slug) {
   return null;
 }
 
+/* Page transition variants */
+const pageVariants = {
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] } },
+  exit:    { opacity: 0, y: -8, transition: { duration: 0.2, ease: 'easeIn' } },
+};
+
 /**
  * ResearchLibrary — DD nav strip + nested page routes (no sidebar).
  */
@@ -103,11 +110,23 @@ export default function ResearchLibrary() {
   const location = useLocation();
   const currentSlug = location.pathname.split('/library/')[1] || '';
   const activePhaseIndex = useMemo(() => getPhaseIndex(currentSlug), [currentSlug]);
+  const contentRef = useRef(null);
+
+  // Scroll to top on page change
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentSlug]);
 
   return (
     <div className="library-layout library-layout--no-sidebar">
       {/* ── Library Content ── */}
-      <div className={`library-content ${currentSlug ? 'library-content--has-strip' : ''}`}>
+      <div
+        ref={contentRef}
+        className={`library-content ${currentSlug ? 'library-content--has-strip' : ''}`}
+      >
         {/* Fixed Double Diamond strip — shown on individual pages */}
         {currentSlug && (
           <div className="dd-nav-strip-sticky">
@@ -115,19 +134,29 @@ export default function ResearchLibrary() {
           </div>
         )}
 
-        <Routes>
-          <Route index element={<LibraryIndex activePhase={activePhaseIndex} currentSlug={currentSlug} />} />
-          {/* Dynamic route for all pages */}
-          {LIBRARY_CATEGORIES.flatMap((cat) =>
-            cat.pages.map((page) => (
-              <Route
-                key={page.slug}
-                path={page.slug}
-                element={<PageFromRegistry slug={page.slug} />}
-              />
-            ))
-          )}
-        </Routes>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlug || 'index'}
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <Routes location={location}>
+              <Route index element={<LibraryIndex activePhase={activePhaseIndex} currentSlug={currentSlug} />} />
+              {/* Dynamic route for all pages */}
+              {LIBRARY_CATEGORIES.flatMap((cat) =>
+                cat.pages.map((page) => (
+                  <Route
+                    key={page.slug}
+                    path={page.slug}
+                    element={<PageFromRegistry slug={page.slug} />}
+                  />
+                ))
+              )}
+            </Routes>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
