@@ -2021,12 +2021,12 @@ h1.hero-title {
 }
 
 .library-content--has-strip {
-  padding-top: 155px;
+  padding-top: 185px;
 }
 
 /* ── Mini diamond wrapper — mirrors .dd-gooey-wrap ── */
 .dd-mini-wrap {
-  --dd-mini-size: 100px;
+  --dd-mini-size: 140px;
   position: relative;
   width: 100%;
   display: flex;
@@ -2131,11 +2131,11 @@ h1.hero-title {
 /* ── Phase labels below diamond ── */
 .dd-mini-phase-row {
   position: relative;
-  width: calc(var(--dd-mini-size) * 3.8);
+  width: calc(var(--dd-mini-size) * 2.6);
   max-width: 100%;
   display: flex;
   z-index: 8;
-  margin-top: -0.25rem;
+  margin-top: -0.15rem;
 }
 
 .dd-mini-phase-label {
@@ -2146,7 +2146,7 @@ h1.hero-title {
   background: none;
   border: none;
   font-family: var(--font-family);
-  font-size: clamp(0.52rem, 0.8vw, 0.68rem);
+  font-size: clamp(0.6rem, 1vw, 0.78rem);
   font-weight: 400;
   letter-spacing: 0.04em;
   color: var(--color-text-body);
@@ -2358,15 +2358,15 @@ h1.hero-title {
   }
 
   .dd-mini-wrap {
-    --dd-mini-size: 64px;
+    --dd-mini-size: 80px;
   }
 
   .dd-mini-phase-label {
-    font-size: 0.5rem;
+    font-size: 0.55rem;
   }
 
   .library-content--has-strip {
-    padding-top: 90px;
+    padding-top: 115px;
   }
 
   /* Popover mobile — center horizontally, full width */
