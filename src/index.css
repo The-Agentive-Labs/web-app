@@ -2059,13 +2059,13 @@ h1.hero-title {
   transition: background 0.4s ease;
 }
 
-/* Per-quadrant shading — left half of rotated square ≈ one phase */
+/* Per-quadrant shading — left/right halves of the rotated square */
 .dd-mini-diamond[data-active-half='left'] {
-  background: linear-gradient(to bottom right, #c4b0e4 50%, #e8e0f0 50%);
+  background: linear-gradient(45deg, #c4b0e4 50%, #e8e0f0 50%);
 }
 
 .dd-mini-diamond[data-active-half='right'] {
-  background: linear-gradient(to bottom right, #e8e0f0 50%, #c4b0e4 50%);
+  background: linear-gradient(45deg, #e8e0f0 50%, #c4b0e4 50%);
 }
 
 [data-theme='dark'] .dd-mini-diamond {
@@ -2073,11 +2073,11 @@ h1.hero-title {
 }
 
 [data-theme='dark'] .dd-mini-diamond[data-active-half='left'] {
-  background: linear-gradient(to bottom right, #3d2f5c 50%, #2a2435 50%);
+  background: linear-gradient(45deg, #3d2f5c 50%, #2a2435 50%);
 }
 
 [data-theme='dark'] .dd-mini-diamond[data-active-half='right'] {
-  background: linear-gradient(to bottom right, #2a2435 50%, #3d2f5c 50%);
+  background: linear-gradient(45deg, #2a2435 50%, #3d2f5c 50%);
 }
 
 /* ── Dashed divider lines — mirrors .dd-dashed-lines ── */
