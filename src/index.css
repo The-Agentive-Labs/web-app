@@ -774,8 +774,27 @@ h1.hero-title {
 
   .sidebar-footer {
     margin-top: 0 !important;
-    margin-left: 1rem;
+    margin-left: auto;
     padding-right: 0.5rem;
+    border-top: none;
+    padding: 0;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  /* Hide the collapse button on mobile — no sidebar to collapse */
+  .sidebar-footer .collapse-toggle:last-child {
+    display: none;
+  }
+
+  /* Dark mode toggle: icon-only on mobile */
+  .sidebar-footer .collapse-toggle {
+    padding: 0.5rem;
+    width: auto;
+  }
+
+  .sidebar-footer .collapse-toggle > span:not(.nav-icon) {
+    display: none;
   }
 
   .nav-item {
@@ -2353,7 +2372,7 @@ h1.hero-title {
   /* ── DD Mini Diamond — Mobile ── */
   .dd-nav-strip-sticky {
     left: 0;
-    top: 0;
+    top: 82px;
     padding: 0.25rem 0.5rem;
   }
 
@@ -2366,7 +2385,7 @@ h1.hero-title {
   }
 
   .library-content--has-strip {
-    padding-top: 115px;
+    padding-top: 200px;
   }
 
   /* Popover mobile — center horizontally, full width */
